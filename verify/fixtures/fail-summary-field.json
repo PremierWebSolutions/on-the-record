@@ -1,0 +1,102 @@
+{
+  "input": "verify/examples/ex1-plain.txt",
+  "expect": "shape",
+  "why": "A summary smuggled in. The contract has no place for one.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": {
+      "file": "ex1-plain.txt",
+      "last_line": "L0006"
+    },
+    "meeting": {
+      "title": {
+        "quote": "Catch-up call - Brook Lane Bakery",
+        "line": "L0001",
+        "speaker": "(none)"
+      },
+      "date": {
+        "quote": "2 April 2026",
+        "line": "L0002",
+        "speaker": "(none)"
+      },
+      "participants": [
+        "Dana Okoro",
+        "Mark Ellis"
+      ]
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Can you check the VAT on the oven",
+        "line": "L0004",
+        "speaker": "Dana Okoro",
+        "owner": "Mark Ellis",
+        "due_as_said": "this week",
+        "accepted_line": "L0005",
+        "accepted_quote": "Yes, I'll do that this week.",
+        "corrections": []
+      },
+      {
+        "id": "A2",
+        "kind": "tentative",
+        "trigger": "i'll try",
+        "quote": "I'll try to send the quarter's figures by the 20th as well.",
+        "line": "L0005",
+        "speaker": "Mark Ellis",
+        "owner": "Mark Ellis",
+        "due_as_said": "by the 20th",
+        "accepted_line": "not in source",
+        "accepted_quote": "not in source",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [
+      {
+        "id": "F1",
+        "token": "£4,800",
+        "quote": "it was £4,800",
+        "line": "L0004",
+        "speaker": "Dana Okoro",
+        "corrections": []
+      },
+      {
+        "id": "F2",
+        "token": "12.5%",
+        "quote": "Is the flat rate still 12.5%?",
+        "line": "L0006",
+        "speaker": "Dana Okoro",
+        "corrections": []
+      }
+    ],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Can you check the VAT on the oven, it was £4,800?",
+        "line": "L0004",
+        "speaker": "Dana Okoro",
+        "corrections": []
+      },
+      {
+        "id": "Q2",
+        "quote": "Is the flat rate still 12.5%?",
+        "line": "L0006",
+        "speaker": "Dana Okoro",
+        "corrections": []
+      }
+    ],
+    "not_mapped": [
+      {
+        "line": "L0003",
+        "category": "action",
+        "trigger": "i'll",
+        "reason": "not_a_commitment",
+        "see_line": "not in source"
+      }
+    ],
+    "summary": "Productive call; client happy with progress."
+  }
+}

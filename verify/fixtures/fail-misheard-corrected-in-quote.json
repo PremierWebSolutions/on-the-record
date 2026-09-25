@@ -1,0 +1,53 @@
+{
+  "input": "verify/fixtures/inputs/misheard.txt",
+  "expect": "trace",
+  "why": "'zero' silently corrected to 'Xero' inside the quote.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": {
+      "file": "misheard.txt",
+      "last_line": "L0002"
+    },
+    "meeting": {
+      "title": "not in source",
+      "date": "not in source",
+      "participants": [
+        "Priya",
+        "Sam"
+      ]
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "can you export the ledger from Xero by Friday?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "owner": "Sam",
+        "due_as_said": "by Friday",
+        "accepted_line": "L0002",
+        "accepted_quote": "Will do.",
+        "corrections": [
+          "C001"
+        ]
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "It's all in zero, can you export the ledger from zero by Friday?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": [
+          "C001"
+        ]
+      }
+    ],
+    "not_mapped": []
+  },
+  "corrections": "verify/fixtures/inputs/misheard.corrections.txt"
+}
