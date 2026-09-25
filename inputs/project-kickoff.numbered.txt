@@ -54,6 +54,7 @@ L0043 | 00:02:44 | Sam Okafor | Bye all.
 # L0014 action "i'll"
 # L0016 action "we'll"
 # L0018 action "we'll"
+# L0020 action "could someone"
 # L0020 question "?"
 # L0022 question "?"
 # L0023 action "we might"

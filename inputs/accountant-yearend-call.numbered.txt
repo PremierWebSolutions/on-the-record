@@ -93,7 +93,7 @@ L0090 | - | Sarah Lomax | Thanks, bye.
 # TRIGGER INDEX: every entry below must be cited by a row or listed in not_mapped
 # L0009 figure "85k"
 # L0010 question "?"
-# L0013 figure "£85,000,"
+# L0013 figure "£85,000"
 # L0017 question "?"
 # L0019 action "i'll"
 # L0024 question "?"

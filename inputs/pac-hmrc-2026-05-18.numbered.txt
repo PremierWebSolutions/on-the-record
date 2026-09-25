@@ -18,15 +18,15 @@ L0015 | - | John-Paul Marks | We will see. If we add a bit more headcount, obvio
 L0016 | Q19 | Chair | But the amount collected will go up because you are putting more resources in.
 L0017 | - | John-Paul Marks | We expect our yield to increase from £50 billion to £60 billion per year by the end of this SR period.
 # TRIGGER INDEX: every entry below must be cited by a row or listed in not_mapped
-# L0003 action "we will"
+# L0003 action "we will probably"
 # L0003 figure "£1"
-# L0003 figure "£95,"
+# L0003 figure "£95"
 # L0003 question "?"
 # L0004 figure "5,500"
 # L0004 figure "2,400"
-# L0004 figure "£10"
-# L0004 figure "£50"
-# L0004 figure "£10"
+# L0004 figure "£10 billion"
+# L0004 figure "£50 billion"
+# L0004 figure "£10 billion"
 # L0005 question "?"
 # L0006 figure "5,500"
 # L0006 figure "60%"
@@ -43,5 +43,5 @@ L0017 | - | John-Paul Marks | We expect our yield to increase from £50 billion 
 # L0012 question "?"
 # L0014 figure "£1"
 # L0015 action "we will"
-# L0017 figure "£50"
-# L0017 figure "£60"
+# L0017 figure "£50 billion"
+# L0017 figure "£60 billion"

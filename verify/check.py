@@ -396,7 +396,33 @@ def selftest():
         print("  %-4s %-38s expect %-10s %s" % ("ok" if good else "XX", f.stem, fx["expect"], got))
     total = len(examples) + len(fixtures)
     print("\n%d/%d examples and fixtures behaved as declared" % (total - bad, total))
-    return bad == 0
+    stale = stale_derived_files()
+    for s in stale:
+        print("  XX   stale: %s does not match a fresh regeneration" % s)
+    return bad == 0 and not stale
+
+
+def stale_derived_files():
+    """Numbered transcripts and examples.md are generated. A stale copy would
+    hand the translator a worklist the checker no longer agrees with."""
+    import subprocess
+    stale = []
+    for numbered in sorted((ROOT / "inputs").glob("*.numbered.txt")):
+        raw = next((p for p in numbered.parent.glob(numbered.name.replace(".numbered.txt", ".*"))
+                    if not p.name.endswith(".numbered.txt")), None)
+        if raw is None:
+            continue
+        fresh = subprocess.run([sys.executable, str(ROOT / "tools" / "number.py"), str(raw)],
+                               capture_output=True, text=True).stdout
+        if fresh != numbered.read_text(encoding="utf-8"):
+            stale.append(numbered.relative_to(ROOT).as_posix())
+    examples = ROOT / "translator" / "examples.md"
+    before = examples.read_text(encoding="utf-8")
+    subprocess.run([sys.executable, str(ROOT / "tools" / "build_examples.py")], capture_output=True)
+    if examples.read_text(encoding="utf-8") != before:
+        examples.write_text(before, encoding="utf-8")
+        stale.append("translator/examples.md")
+    return stale
 
 
 def matrix():

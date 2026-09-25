@@ -34,6 +34,11 @@ can you
 could you
 would you
 will you
+can someone
+could someone
+would someone
+can somebody
+could somebody
 please
 would you mind
 i need you to
