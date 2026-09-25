@@ -1,0 +1,248 @@
+{
+  "translator": "on-the-record",
+  "version": "1",
+  "source": {
+    "file": "inputs/project-kickoff.vtt",
+    "last_line": "L0043"
+  },
+  "meeting": {
+    "title": "not in source",
+    "date": "not in source",
+    "participants": [
+      "Sam Okafor",
+      "Ben Farrell",
+      "Nadia Chen",
+      "Unknown speaker"
+    ]
+  },
+  "actions": [
+    {
+      "id": "A1",
+      "kind": "requested",
+      "trigger": "can you",
+      "quote": "Nadia, can you send over the moodboard by Wednesday?",
+      "line": "L0013",
+      "speaker": "Sam Okafor",
+      "owner": "Nadia Chen",
+      "due_as_said": "by Wednesday",
+      "accepted_line": "L0014",
+      "accepted_quote": "Yes, I'll have that with you by Wednesday.",
+      "corrections": []
+    },
+    {
+      "id": "A2",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "We'll send the sitemap by Wednesday as well, alongside the moodboard.",
+      "line": "L0016",
+      "speaker": "Sam Okafor",
+      "owner": "Sam Okafor",
+      "due_as_said": "by Wednesday",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A3",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "On the design side, we'll have the first full designs ready by the end of the month.",
+      "line": "L0018",
+      "speaker": "Nadia Chen",
+      "owner": "Nadia Chen",
+      "due_as_said": "by the end of the month",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A4",
+      "kind": "requested",
+      "trigger": "could someone",
+      "quote": "Could someone loop in our copywriter this week, she'll need the tone of voice doc?",
+      "line": "L0020",
+      "speaker": "Ben Farrell",
+      "owner": "not in source",
+      "due_as_said": "this week",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A5",
+      "kind": "tentative",
+      "trigger": "we might",
+      "quote": "We're happy to stay where we are for now, we might revisit hosting after phase one.",
+      "line": "L0023",
+      "speaker": "Ben Farrell",
+      "owner": "Ben Farrell",
+      "due_as_said": "after phase one",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A6",
+      "kind": "tentative",
+      "trigger": "i might",
+      "quote": "I might be able to get a first working draft over by Friday, no promises on that one.",
+      "line": "L0026",
+      "speaker": "Sam Okafor",
+      "owner": "Sam Okafor",
+      "due_as_said": "by Friday",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A7",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "Okay, we'll follow up separately on that.",
+      "line": "L0033",
+      "speaker": "Sam Okafor",
+      "owner": "Sam Okafor",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A8",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "Yes, I'll set that up today.",
+      "line": "L0035",
+      "speaker": "Ben Farrell",
+      "owner": "Ben Farrell",
+      "due_as_said": "today",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A9",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "We'll circulate the meeting notes by end of day.",
+      "line": "L0039",
+      "speaker": "Nadia Chen",
+      "owner": "Nadia Chen",
+      "due_as_said": "by end of day",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "trigger": "let's go with",
+      "quote": "Okay, let's go with the current host then, no migration needed.",
+      "line": "L0024",
+      "speaker": "Sam Okafor",
+      "corrections": []
+    },
+    {
+      "id": "D2",
+      "trigger": "agreed",
+      "quote": "Agreed, one less thing to worry about.",
+      "line": "L0025",
+      "speaker": "Ben Farrell",
+      "corrections": []
+    }
+  ],
+  "figures": [
+    {
+      "id": "F1",
+      "token": "£12,500",
+      "quote": "The budget agreed is £12,500 for phase one.",
+      "line": "L0007",
+      "speaker": "Sam Okafor",
+      "corrections": []
+    },
+    {
+      "id": "F2",
+      "token": "12.5k",
+      "quote": "So call it 12.5k all in, covering design and build.",
+      "line": "L0009",
+      "speaker": "Nadia Chen",
+      "corrections": []
+    },
+    {
+      "id": "F3",
+      "token": "10%",
+      "quote": "We'd normally add a 10% contingency on top for scope changes, just so you're aware.",
+      "line": "L0011",
+      "speaker": "Sam Okafor",
+      "corrections": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "quote": "Nadia, can you send over the moodboard by Wednesday?",
+      "line": "L0013",
+      "speaker": "Sam Okafor",
+      "corrections": []
+    },
+    {
+      "id": "Q2",
+      "quote": "Could someone loop in our copywriter this week, she'll need the tone of voice doc?",
+      "line": "L0020",
+      "speaker": "Ben Farrell",
+      "corrections": []
+    },
+    {
+      "id": "Q3",
+      "quote": "We were assuming you'd stay on your current host, is that still the plan?",
+      "line": "L0022",
+      "speaker": "Nadia Chen",
+      "corrections": []
+    },
+    {
+      "id": "Q4",
+      "quote": "Sorry, can everyone hear me okay now?",
+      "line": "L0028",
+      "speaker": "Unknown speaker",
+      "corrections": []
+    },
+    {
+      "id": "Q5",
+      "quote": "So on content, who's pulling together the product copy?",
+      "line": "L0031",
+      "speaker": "Sam Okafor",
+      "corrections": []
+    },
+    {
+      "id": "Q6",
+      "quote": "Can I get access to your image library this week?",
+      "line": "L0034",
+      "speaker": "Nadia Chen",
+      "corrections": []
+    }
+  ],
+  "not_mapped": [
+    {
+      "line": "L0007",
+      "category": "decision",
+      "trigger": "agreed",
+      "reason": "not_a_decision",
+      "see_line": "not in source"
+    },
+    {
+      "line": "L0012",
+      "category": "action",
+      "trigger": "hopefully",
+      "reason": "not_a_commitment",
+      "see_line": "not in source"
+    },
+    {
+      "line": "L0027",
+      "category": "action",
+      "trigger": "i'll",
+      "reason": "not_a_commitment",
+      "see_line": "not in source"
+    }
+  ]
+}

@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+call.txt
+note.json
+note.html
