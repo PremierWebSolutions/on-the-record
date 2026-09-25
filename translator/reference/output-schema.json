@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "on-the-record output, version 1",
+  "description": "The contract. Every output has exactly these keys in this order. Field meanings are in fields.md. The checker validates against this file.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["translator", "version", "source", "meeting", "actions", "decisions", "figures", "questions", "not_mapped"],
+  "properties": {
+    "translator": { "const": "on-the-record" },
+    "version": { "const": "1" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file", "last_line"],
+      "properties": {
+        "file": { "type": "string" },
+        "last_line": { "$ref": "#/$defs/line" }
+      }
+    },
+    "meeting": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "date", "participants"],
+      "properties": {
+        "title": { "anyOf": [ { "const": "not in source" }, { "$ref": "#/$defs/cited" } ] },
+        "date": { "anyOf": [ { "const": "not in source" }, { "$ref": "#/$defs/cited" } ] },
+        "participants": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "actions": { "type": "array", "items": { "$ref": "#/$defs/action" } },
+    "decisions": { "type": "array", "items": { "$ref": "#/$defs/decision" } },
+    "figures": { "type": "array", "items": { "$ref": "#/$defs/figure" } },
+    "questions": { "type": "array", "items": { "$ref": "#/$defs/question" } },
+    "not_mapped": { "type": "array", "items": { "$ref": "#/$defs/unmapped" } }
+  },
+  "$defs": {
+    "line": { "type": "string", "pattern": "^L\\d{4}$" },
+    "sentinel": { "const": "not in source" },
+    "corrections": { "type": "array", "items": { "type": "string", "pattern": "^C\\d{3}$" } },
+    "cited": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["quote", "line", "speaker"],
+      "properties": {
+        "quote": { "type": "string" },
+        "line": { "$ref": "#/$defs/line" },
+        "speaker": { "type": "string" }
+      }
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "trigger", "quote", "line", "speaker", "owner", "due_as_said", "accepted_line", "accepted_quote", "corrections"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^A\\d+$" },
+        "kind": { "enum": ["committed", "requested", "tentative"] },
+        "trigger": { "type": "string" },
+        "quote": { "type": "string" },
+        "line": { "$ref": "#/$defs/line" },
+        "speaker": { "type": "string" },
+        "owner": { "type": "string" },
+        "due_as_said": { "type": "string" },
+        "accepted_line": { "anyOf": [ { "$ref": "#/$defs/sentinel" }, { "$ref": "#/$defs/line" } ] },
+        "accepted_quote": { "type": "string" },
+        "corrections": { "$ref": "#/$defs/corrections" }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "trigger", "quote", "line", "speaker", "corrections"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^D\\d+$" },
+        "trigger": { "type": "string" },
+        "quote": { "type": "string" },
+        "line": { "$ref": "#/$defs/line" },
+        "speaker": { "type": "string" },
+        "corrections": { "$ref": "#/$defs/corrections" }
+      }
+    },
+    "figure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "token", "quote", "line", "speaker", "corrections"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^F\\d+$" },
+        "token": { "type": "string" },
+        "quote": { "type": "string" },
+        "line": { "$ref": "#/$defs/line" },
+        "speaker": { "type": "string" },
+        "corrections": { "$ref": "#/$defs/corrections" }
+      }
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "quote", "line", "speaker", "corrections"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^Q\\d+$" },
+        "quote": { "type": "string" },
+        "line": { "$ref": "#/$defs/line" },
+        "speaker": { "type": "string" },
+        "corrections": { "$ref": "#/$defs/corrections" }
+      }
+    },
+    "unmapped": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line", "category", "trigger", "reason", "see_line"],
+      "properties": {
+        "line": { "$ref": "#/$defs/line" },
+        "category": { "enum": ["action", "decision", "figure", "question"] },
+        "trigger": { "type": "string" },
+        "reason": { "enum": ["not_a_commitment", "hypothetical", "reported_speech", "repeat", "not_a_decision", "rhetorical", "inaudible", "label_or_reference"] },
+        "see_line": { "anyOf": [ { "$ref": "#/$defs/sentinel" }, { "$ref": "#/$defs/line" } ] }
+      }
+    }
+  }
+}
