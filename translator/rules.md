@@ -15,7 +15,7 @@ Follow these in order. Each rule is checked by a named gate in `verify/check.py`
 
 ## Actions
 
-6. **Kind comes from the words.** A line with a `committed` phrase is a commitment, a `requested` phrase is a request, a `tentative` phrase is a hedge. If a hedge phrase is anywhere in the quote, the kind is `tentative`. `trigger` is the exact list entry that matched. *(trigger)*
+6. **Kind comes from the words.** A line with a `committed` phrase is a commitment, a `requested` phrase is a request, a `tentative` phrase is a hedge. If a hedge phrase is anywhere in the quote, the kind is `tentative`. `trigger` is the exact list entry that matched; if more than one phrase of that kind is in the quote, use the first. *(trigger)*
 7. **Committed and tentative actions belong to the speaker.** `owner` equals `speaker`. For "we'll", the owner is still the person who said it. *(owner)*
 8. **A request belongs to whoever took it.** If the very next line by a different speaker accepts it (a phrase from the acceptance list), fill `accepted_line` and `accepted_quote` from that line and make that speaker the owner. Otherwise, if the request names its addressee on the same line ("Tom, can you…"), the owner is that name exactly as spelled. Otherwise the owner is `not in source`. *(owner)*
 9. **Due dates are kept as said.** `due_as_said` is a verbatim piece of the quote or the acceptance ("by Friday", "in about three weeks"), or `not in source`. Never convert it to a calendar date. *(due)*
@@ -23,15 +23,15 @@ Follow these in order. Each rule is checked by a named gate in `verify/check.py`
 
 ## Decisions, figures, questions
 
-11. **A decision needs a decision phrase** on its line, inside its quote. *(trigger)*
-12. **Every figure the pattern finds is listed**, with `token` copied exactly as transcribed: "85k" stays "85k", "£85,000" stays "£85,000". You may also list a spelled-out number ("eighty-five thousand"). Never convert, total or round. *(coverage, trace)*
+11. **A decision needs a decision phrase** on its line, inside its quote. If the quote holds more than one, `trigger` is the first. A second speaker agreeing to the same decision is its own row. *(trigger)*
+12. **Every figure the pattern finds is listed**, with `token` copied exactly from the line (the index shows the same text): "85k" stays "85k", "£85,000" stays "£85,000". You may also list a spelled-out number ("eighty-five thousand"). Never convert, total or round. *(coverage, trace)*
 13. **A question row quotes the question, including its question mark.** Whether it was answered is not recorded. That is a judgement. *(trigger)*
 
 ## Accounting for everything
 
-14. **Nothing on the worklist is dropped.** Each entry is either inside a row's quote on that line, or listed in `not_mapped` with the trigger exactly as the index shows it and one reason from the closed list: `not_a_commitment` ("I'll be honest"), `hypothetical` ("if we registered, we'd…"), `reported_speech` ("HMRC said they will…"), `repeat` (the same thing already recorded, with `see_line` pointing at it), `not_a_decision`, `rhetorical`, `inaudible`, `label_or_reference`, `procedural` (running the meeting: "we will move on to…"). `see_line` is `not in source` unless the reason is `repeat`. *(coverage)*
+14. **Nothing on the worklist is dropped.** Each entry is either inside a row's quote on that line, or listed in `not_mapped` with the trigger exactly as the index shows it and one reason from the closed list: `not_a_commitment` (a trigger used for something other than taking on a task: "I'll be honest", "we will see", "we'll need his UTR"), `hypothetical` ("if we registered, we'd…"), `reported_speech` ("HMRC said they will…"), `repeat` (the same thing already recorded, with `see_line` pointing at it), `not_a_decision`, `rhetorical`, `inaudible`, `label_or_reference`, `procedural` (running the meeting: "we will move on to…"). `see_line` is `not in source` unless the reason is `repeat`. *(coverage)*
 15. **Rows run in transcript order** and ids count up from 1 in each section: A1, A2… D1… F1… Q1… *(shape)*
-16. **`meeting.participants` is every speaker label** in order of first appearance, excluding `(none)`. `title` and `date` are quoted from the transcript's own header or speech, or `not in source`. *(shape)*
+16. **`meeting.participants` is every speaker label** in order of first appearance, excluding `(none)`. `title` and `date` are quoted only from the unlabelled header lines before anyone speaks (speaker `(none)`), or are `not in source`. Something said during the call is not a title. *(shape, speaker)*
 
 ## Corrections (optional)
 

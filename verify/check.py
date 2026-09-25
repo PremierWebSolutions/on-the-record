@@ -190,6 +190,8 @@ def gate_speaker(out, lines, ctx):
     errs, by_id = [], ctx["by_id"]
     for sec, row in cited_rows(out):
         ln = by_id.get(row["line"])
+        if sec.startswith("meeting.") and row["speaker"] != NO_SPEAKER:
+            errs.append("%s must come from an unlabelled header line, not from what someone said" % sec)
         if ln and row["speaker"] != ln.speaker:
             errs.append("%s: %s is spoken by %r, the row says %r" % (label(sec, row), ln.id, ln.speaker, row["speaker"]))
     return errs

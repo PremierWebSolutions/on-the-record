@@ -30,7 +30,7 @@ The machine-readable contract is [output-schema.json](output-schema.json). This 
 
 | Field | Meaning |
 |---|---|
-| `title` | `{quote, line, speaker}` from the transcript's own header or speech, or `not in source`. |
+| `title` | `{quote, line, speaker}` from an unlabelled header line before anyone speaks, or `not in source`. |
 | `date` | Same. The date exactly as written or said, never reformatted. |
 | `participants` | Every speaker label in order of first appearance. |
 

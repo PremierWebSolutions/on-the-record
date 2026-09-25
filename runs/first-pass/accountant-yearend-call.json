@@ -1,0 +1,385 @@
+{
+  "translator": "on-the-record",
+  "version": "1",
+  "source": {
+    "file": "inputs/accountant-yearend-call.txt",
+    "last_line": "L0090"
+  },
+  "meeting": {
+    "title": {
+      "quote": "Year-end review call - Hartley Joinery Ltd",
+      "line": "L0001",
+      "speaker": "(none)"
+    },
+    "date": {
+      "quote": "Recorded on 14 March 2026",
+      "line": "L0002",
+      "speaker": "(none)"
+    },
+    "participants": [
+      "Priya Nair",
+      "Tom Hartley",
+      "Sarah Lomax"
+    ]
+  },
+  "actions": [
+    {
+      "id": "A1",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll keep it under Halden Timber in the notes.",
+      "line": "L0019",
+      "speaker": "Priya Nair",
+      "owner": "Priya Nair",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A2",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll flag that on the invoices going forward.",
+      "line": "L0030",
+      "speaker": "Sarah Lomax",
+      "owner": "Sarah Lomax",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A3",
+      "kind": "requested",
+      "trigger": "can you",
+      "quote": "Tom, can you dig out the invoice from the stove supplier",
+      "line": "L0034",
+      "speaker": "Priya Nair",
+      "owner": "Tom",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A4",
+      "kind": "requested",
+      "trigger": "could you",
+      "quote": "Could you check whether the van was bought on finance",
+      "line": "L0037",
+      "speaker": "Priya Nair",
+      "owner": "not in source",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A5",
+      "kind": "tentative",
+      "trigger": "i'll try",
+      "quote": "I'll try to get the mileage log over by the end of next week",
+      "line": "L0042",
+      "speaker": "Sarah Lomax",
+      "owner": "Sarah Lomax",
+      "due_as_said": "by the end of next week",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A6",
+      "kind": "requested",
+      "trigger": "can you",
+      "quote": "Can you send me the payroll summary",
+      "line": "L0044",
+      "speaker": "Priya Nair",
+      "owner": "Sarah Lomax",
+      "due_as_said": "today",
+      "accepted_line": "L0045",
+      "accepted_quote": "Yes, I'll do that today.",
+      "corrections": []
+    },
+    {
+      "id": "A7",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll note that as the decision for the file.",
+      "line": "L0061",
+      "speaker": "Priya Nair",
+      "owner": "Priya Nair",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A8",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll send you the bank statements by Friday",
+      "line": "L0062",
+      "speaker": "Priya Nair",
+      "owner": "Priya Nair",
+      "due_as_said": "by Friday",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A9",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "We'll get the draft accounts to you in about three weeks.",
+      "line": "L0064",
+      "speaker": "Priya Nair",
+      "owner": "Priya Nair",
+      "due_as_said": "in about three weeks",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A10",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll move that across.",
+      "line": "L0069",
+      "speaker": "Sarah Lomax",
+      "owner": "Sarah Lomax",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A11",
+      "kind": "requested",
+      "trigger": "can you",
+      "quote": "I've got a note here saying the 31st of June, can you confirm that",
+      "line": "L0074",
+      "speaker": "Priya Nair",
+      "owner": "not in source",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A12",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll check the actual date.",
+      "line": "L0075",
+      "speaker": "Sarah Lomax",
+      "owner": "Sarah Lomax",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A13",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll add that back into the schedule then.",
+      "line": "L0084",
+      "speaker": "Sarah Lomax",
+      "owner": "Sarah Lomax",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A14",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll be in touch once the draft accounts are ready.",
+      "line": "L0088",
+      "speaker": "Priya Nair",
+      "owner": "Priya Nair",
+      "due_as_said": "once the draft accounts are ready",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "trigger": "agreed",
+      "quote": "Agreed.",
+      "line": "L0027",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "D2",
+      "trigger": "agreed",
+      "quote": "Okay, agreed, let's go with the cash basis.",
+      "line": "L0060",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    }
+  ],
+  "figures": [
+    {
+      "id": "F1",
+      "token": "85k",
+      "quote": "Turnover for the year came out at about 85k.",
+      "line": "L0009",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "F2",
+      "token": "£85,000",
+      "quote": "that's £85,000, give or take.",
+      "line": "L0013",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "F3",
+      "token": "4,200",
+      "quote": "Tom did 4,200 miles on the log for the year.",
+      "line": "L0040",
+      "speaker": "Sarah Lomax",
+      "corrections": []
+    },
+    {
+      "id": "F4",
+      "token": "£1,412.50",
+      "quote": "a repair figure of £1,412.50 sitting in a suspense code",
+      "line": "L0067",
+      "speaker": "Sarah Lomax",
+      "corrections": []
+    },
+    {
+      "id": "F5",
+      "token": "20%",
+      "quote": "the rate you're on works out at 20% effectively",
+      "line": "L0078",
+      "speaker": "Priya Nair",
+      "corrections": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "quote": "Is that up on last year?",
+      "line": "L0010",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    },
+    {
+      "id": "Q2",
+      "quote": "I noticed one invoice in there from, um, Haldane Timber, is that the same company?",
+      "line": "L0017",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "Q3",
+      "quote": "If we registered for VAT we'd have to charge twenty percent on everything though, right?",
+      "line": "L0024",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    },
+    {
+      "id": "Q4",
+      "quote": "[inaudible] about the stove supplier invoice, did that come through?",
+      "line": "L0032",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    },
+    {
+      "id": "Q5",
+      "quote": "Tom, can you dig out the invoice from the stove supplier?",
+      "line": "L0034",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "Q6",
+      "quote": "Could you check whether the van was bought on finance?",
+      "line": "L0037",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "Q7",
+      "quote": "Can you send me the payroll summary?",
+      "line": "L0044",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "Q8",
+      "quote": "Does the roof count as a repair or an improvement for tax?",
+      "line": "L0047",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    },
+    {
+      "id": "Q9",
+      "quote": "How's the profit looking compared to what we budgeted?",
+      "line": "L0050",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    },
+    {
+      "id": "Q10",
+      "quote": "What's the actual difference for us day to day?",
+      "line": "L0057",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    },
+    {
+      "id": "Q11",
+      "quote": "One more thing on dates, the AGM paperwork, I've got a note here saying the 31st of June, can you confirm that?",
+      "line": "L0074",
+      "speaker": "Priya Nair",
+      "corrections": []
+    },
+    {
+      "id": "Q12",
+      "quote": "Should I carry the drawings figure over the same way as last year?",
+      "line": "L0080",
+      "speaker": "Sarah Lomax",
+      "corrections": []
+    },
+    {
+      "id": "Q13",
+      "quote": "What about the use of home allowance, is that still worth claiming?",
+      "line": "L0082",
+      "speaker": "Tom Hartley",
+      "corrections": []
+    }
+  ],
+  "not_mapped": [
+    {
+      "line": "L0036",
+      "category": "action",
+      "trigger": "we'll",
+      "reason": "not_a_commitment",
+      "see_line": "not in source"
+    },
+    {
+      "line": "L0039",
+      "category": "action",
+      "trigger": "we'll",
+      "reason": "procedural",
+      "see_line": "not in source"
+    },
+    {
+      "line": "L0070",
+      "category": "action",
+      "trigger": "i'll",
+      "reason": "not_a_commitment",
+      "see_line": "not in source"
+    }
+  ]
+}
