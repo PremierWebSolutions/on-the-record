@@ -59,7 +59,7 @@ Output:
       "id": "A1",
       "kind": "requested",
       "trigger": "can you",
-      "quote": "Can you check the VAT on the oven",
+      "quote": "Can you check the VAT on the oven, it was £4,800?",
       "line": "L0004",
       "speaker": "Dana Okoro",
       "owner": "Mark Ellis",

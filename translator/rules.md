@@ -9,7 +9,7 @@ Follow these in order. Each rule is checked by a named gate in `verify/check.py`
 
 ## Every row
 
-3. **Quote, don't paraphrase.** `quote` is an exact, unbroken piece of the text on the line you cite. Keep the transcript's spelling, grammar, filler words and mishearings. You may shorten a quote to the words that matter, but you may not change or reorder any of them. A quote never spans two lines. *(trace)*
+3. **Quote, don't paraphrase.** `quote` is an exact, unbroken piece of the text on the line you cite. Keep the transcript's spelling, grammar, filler words and mishearings. You may start a quote late and leave out what comes after, but you may not change or reorder any words. An action or decision quote runs at least from its trigger to the end of that sentence, so a condition such as "if the bank gets back to me" is never cut off. A quote never spans two lines. *(trace, trigger)*
 4. **Copy the speaker.** `speaker` is the label on the cited line, character for character. *(speaker)*
 5. **Missing means `not in source`.** When the transcript does not say it, the field is exactly `not in source`. Never leave a field out, never write null, never guess. *(shape)*
 

@@ -236,8 +236,30 @@ def gate_owner(out, lines, ctx):
     return errs
 
 
+def runs_to_sentence_end(quote, trigger, line_text):
+    """A quote may start late but must not stop before the end of the sentence
+    holding its trigger, so a condition ("…if the bank replies") can't be cut."""
+    text = norm(line_text).lower()
+    for qs, qe in spans(quote, line_text):
+        m = re.search(r"(?<![a-z0-9'])" + re.escape(norm(trigger).lower()), text[qs:qe])
+        if not m:
+            continue
+        stop = re.search(r"[.?!](?=\s|$)", text[qs + m.end():])
+        sentence_end = qs + m.end() + stop.end() if stop else len(text)
+        if qe >= sentence_end:
+            return True
+    return False
+
+
 def gate_trigger(out, lines, ctx):
-    errs, lex = [], ctx["lex"]
+    errs, lex, by_id = [], ctx["lex"], ctx["by_id"]
+    for sec in ("actions", "decisions"):
+        for r in out[sec]:
+            ln = by_id.get(r["line"])
+            if ln and in_text(r["quote"], ln.text) and contains_phrase(r["quote"], r["trigger"]) \
+                    and not runs_to_sentence_end(r["quote"], r["trigger"], ln.text):
+                errs.append("%s: the quote stops before the end of the sentence holding %r; a condition or "
+                            "qualifier may have been cut" % (label(sec, r), r["trigger"]))
     for a in out["actions"]:
         where = label("actions", a)
         if a["trigger"] not in lex[a["kind"]]:
