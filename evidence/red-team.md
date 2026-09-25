@@ -1,6 +1,6 @@
 # Red team
 
-Before submission the checker was attacked by seven independent agents and one outside reader, each told: forge an output that contains an invented, altered or misattributed value and still passes every gate. The forgeries they produced are the reason most of the gates in `verify/check.py` exist in their current form. Every hole below is closed and carries a planted fixture in `verify/fixtures/` that must fail through the gate named; `python3 verify/check.py --selftest` proves it.
+Before submission the checker was attacked by five independent agents and one outside reader, each told: forge an output that contains an invented, altered or misattributed value and still passes every gate. The forgeries they produced are the reason most of the gates in `verify/check.py` exist in their current form. Every hole below is closed and carries a planted fixture in `verify/fixtures/` that must fail through the gate named; `python3 verify/check.py --selftest` proves it.
 
 ## Round 1: holes that passed the checker as first built
 
@@ -50,8 +50,8 @@ Confirmed not exploitable in round 2: a vocative before a commitment ("Tom, I'll
 
 ## What the two rounds cost
 
-Twelve attackers found thirty holes in a checker that passed its own planted fixtures throughout. Every one is closed with a fixture, and the four published runs were made blind again under the final rules. The count is the honest measure of how far a string checker can be trusted, and it is why [LIMITS.md](../LIMITS.md) is as long as it is.
+Eleven attackers, over two rounds, found thirty holes in a checker that passed its own planted fixtures throughout. Every one is closed with a fixture, and the four published runs were made blind again under the final rules. The count is the honest measure of how far a string checker can be trusted, and it is why [LIMITS.md](../LIMITS.md) is as long as it is.
 
 ## What this does not prove
 
-Twenty-four forgeries by eight attackers is evidence, not a proof. The gates are string checks over a lexicon, and [LIMITS.md](../LIMITS.md) lists the classes a passing run still cannot rule out.
+Twenty-four forgeries by six attackers is evidence, not a proof. The gates are string checks over a lexicon, and [LIMITS.md](../LIMITS.md) lists the classes a passing run still cannot rule out.
