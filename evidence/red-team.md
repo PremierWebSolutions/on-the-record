@@ -54,4 +54,4 @@ Eleven attackers, over two rounds, found thirty holes in a checker that passed i
 
 ## What this does not prove
 
-Twenty-four forgeries by six attackers is evidence, not a proof. The gates are string checks over a lexicon, and [LIMITS.md](../LIMITS.md) lists the classes a passing run still cannot rule out.
+Thirty findings by eleven attackers is evidence, not a proof. The gates are string checks over a lexicon, and [LIMITS.md](../LIMITS.md) lists the classes a passing run still cannot rule out.
