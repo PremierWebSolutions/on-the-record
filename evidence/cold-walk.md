@@ -32,4 +32,4 @@ A reader who has never seen the repo opens the README and tries to translate a t
 4. The limits line now says the checker prints a short list and LIMITS.md has the full one.
 5. The CLI shortcut moved out of step 2 into its own line after the steps.
 
-Predictions were committed in `a2ed329`; the walk and fixes are in the commit after it.
+Predictions were committed in `85b43f6`; the walk and fixes are in the commit after it.

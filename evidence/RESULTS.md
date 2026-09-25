@@ -1,6 +1,6 @@
 # Results
 
-The method was committed before any run was checked ([TEST_METHOD.md](TEST_METHOD.md), commit `ebe0b71`). Every run below was blind: a fresh agent that read only `translator/` and one numbered transcript, with one attempt. Re-run any of them with `python3 verify/check.py --input <transcript> --output <run>`.
+The method was committed before any run was checked ([TEST_METHOD.md](TEST_METHOD.md), commit `4c8492d`). Every run below was blind: a fresh agent that read only `translator/` and one numbered transcript, with one attempt. Re-run any of them with `python3 verify/check.py --input <transcript> --output <run>`.
 
 ## Final runs: Claude Sonnet 5, second blind pass
 
