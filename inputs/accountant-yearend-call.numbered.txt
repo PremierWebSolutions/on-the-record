@@ -1,0 +1,132 @@
+# on-the-record numbered transcript, version 1
+# source: accountant-yearend-call.txt | lines: 90 | format: L#### | mark | speaker | text
+L0001 | - | (none) | Year-end review call - Hartley Joinery Ltd
+L0002 | - | (none) | Recorded on 14 March 2026
+L0003 | - | (none) | Present - Priya Nair, Tom Hartley, Sarah Lomax
+L0004 | - | Priya Nair | Morning both, thanks for joining, um, this is the year-end review for the twelve months to 31 December twenty twenty-five.
+L0005 | - | Tom Hartley | Morning Priya, morning Sarah.
+L0006 | - | Sarah Lomax | Morning.
+L0007 | - | Priya Nair | So I've been through what Sarah's sent over and it's all in zero, which is great, makes life a lot easier.
+L0008 | - | Tom Hartley | Yeah we moved everything across in the summer.
+L0009 | - | Priya Nair | Turnover for the year came out at about 85k.
+L0010 | - | Tom Hartley | Is that up on last year?
+L0011 | - | Priya Nair | It is, last year was closer to seventy, so a decent jump.
+L0012 | - | Sarah Lomax | A lot of that's the two kitchen fit-outs in the autumn.
+L0013 | - | Priya Nair | So just to confirm the figure for the file, that's £85,000, give or take.
+L0014 | - | Tom Hartley | Sounds about right.
+L0015 | - | Priya Nair | On the purchases side, the biggest supplier by far is Halden Timber.
+L0016 | - | Tom Hartley | Yeah they do most of our hardwood now.
+L0017 | - | Priya Nair | I noticed one invoice in there from, um, Haldane Timber, is that the same company?
+L0018 | - | Sarah Lomax | Yeah same one, I think that's just how it printed on the statement.
+L0019 | - | Priya Nair | Okay, I'll keep it under Halden Timber in the notes.
+L0020 | - | Tom Hartley | [crosstalk]
+L0021 | - | Sarah Lomax | Sorry, go on.
+L0022 | - | Tom Hartley | I was just going to say the stove installs are the other big one this year.
+L0023 | - | Priya Nair | Yes, let's come to those. On the VAT side you're still under the threshold.
+L0024 | - | Tom Hartley | If we registered for VAT we'd have to charge twenty percent on everything though, right?
+L0025 | - | Priya Nair | Right, and most of your customers are homeowners so they'd feel that.
+L0026 | - | Tom Hartley | Yeah, best avoided for now then.
+L0027 | - | Priya Nair | Agreed. On the stove installs specifically, I want to check the VAT treatment.
+L0028 | - | Priya Nair | My first read was that's exempt.
+L0029 | - | Priya Nair | Sorry, zero-rated, not exempt, since it's a qualifying energy-saving install.
+L0030 | - | Sarah Lomax | I'll flag that on the invoices going forward.
+L0031 | - | Priya Nair | Good, that helps keep the file clean. As long as it's all sitting in zero properly coded, I can pull the report straight off it.
+L0032 | - | Tom Hartley | [inaudible] about the stove supplier invoice, did that come through?
+L0033 | - | Priya Nair | I don't think I've got that one yet.
+L0034 | - | Priya Nair | Tom, can you dig out the invoice from the stove supplier?
+L0035 | - | Tom Hartley | So the joinery side, we took on Dave as a subcontractor in March.
+L0036 | - | Priya Nair | Okay, we'll need his UTR for the return, but let's move on to the van.
+L0037 | - | Priya Nair | Could you check whether the van was bought on finance?
+L0038 | - | Tom Hartley | The workshop roof needed doing as well this year, that ate into things a bit.
+L0039 | - | Priya Nair | Right, we'll pick the roof cost up separately in a minute. Let's talk mileage first.
+L0040 | - | Sarah Lomax | Tom did 4,200 miles on the log for the year.
+L0041 | - | Priya Nair | That's a good level of detail to have.
+L0042 | - | Sarah Lomax | I'll try to get the mileage log over by the end of next week, it's not quite finished.
+L0043 | - | Priya Nair | That's fine, no rush on that one specifically.
+L0044 | - | Priya Nair | Can you send me the payroll summary?
+L0045 | - | Sarah Lomax | Yes, I'll do that today.
+L0046 | - | Priya Nair | Perfect, that's one of the last pieces I need.
+L0047 | - | Tom Hartley | Does the roof count as a repair or an improvement for tax?
+L0048 | - | Sarah Lomax | While we're on the roof, I should say the insurance renewal came in higher this year too.
+L0049 | - | Priya Nair | Noted. Let's look at profit next.
+L0050 | - | Tom Hartley | How's the profit looking compared to what we budgeted?
+L0051 | - | Priya Nair | Better, actually, net profit's come in a good bit higher than the budget we talked about in the spring.
+L0052 | - | Tom Hartley | That's good to hear.
+L0053 | - | Priya Nair | HMRC said they will send a new code for you personally, following the dividend you took in November.
+L0054 | - | Tom Hartley | Oh, nobody's mentioned that to me.
+L0055 | - | Priya Nair | It'll land in the post in the next few weeks probably.
+L0056 | - | Priya Nair | On the accounting basis, I'd recommend moving from accruals to the cash basis given the size of the business now.
+L0057 | - | Tom Hartley | What's the actual difference for us day to day?
+L0058 | - | Priya Nair | Mainly it's simpler bookkeeping, you're taxed on money in and out rather than invoiced amounts.
+L0059 | - | Sarah Lomax | That would cut down a lot of the adjustments I'm doing at the moment.
+L0060 | - | Tom Hartley | Okay, agreed, let's go with the cash basis.
+L0061 | - | Priya Nair | Great, I'll note that as the decision for the file.
+L0062 | - | Priya Nair | I'll send you the bank statements by Friday, the ones I copied over for the audit trail.
+L0063 | - | Tom Hartley | Appreciate it.
+L0064 | - | Priya Nair | We'll get the draft accounts to you in about three weeks.
+L0065 | - | Tom Hartley | Three weeks, okay, that ties in with when the bank wants updated figures.
+L0066 | - | Priya Nair | Good, that works out well then.
+L0067 | - | Sarah Lomax | There's a repair figure of £1,412.50 sitting in a suspense code, I wasn't sure where that one goes.
+L0068 | - | Priya Nair | That'll be the van repair in October, put it against motor expenses.
+L0069 | - | Sarah Lomax | Got it, I'll move that across.
+L0070 | - | Tom Hartley | I'll be honest, it was a tough year in some ways, the roof and then the van both at once.
+L0071 | - | Priya Nair | Understandable, but the numbers have actually held up well despite that.
+L0072 | - | Tom Hartley | Good to know it doesn't show up in the figures as badly as it felt.
+L0073 | - | Priya Nair | It doesn't, no.
+L0074 | - | Priya Nair | One more thing on dates, the AGM paperwork, I've got a note here saying the 31st of June, can you confirm that?
+L0075 | - | Sarah Lomax | I think that's just a typo somewhere, I'll check the actual date.
+L0076 | - | Priya Nair | Thanks, just flag it back to me once you've got it.
+L0077 | - | Tom Hartley | The accounts need filing at some point, I know that.
+L0078 | - | Priya Nair | On the corporation tax side, the rate you're on works out at 20% effectively once marginal relief is applied.
+L0079 | - | Tom Hartley | Right, that makes sense.
+L0080 | - | Sarah Lomax | Should I carry the drawings figure over the same way as last year?
+L0081 | - | Priya Nair | Yes, same treatment, nothing's changed there.
+L0082 | - | Tom Hartley | What about the use of home allowance, is that still worth claiming?
+L0083 | - | Priya Nair | It is, it's a small figure but it's not worth losing.
+L0084 | - | Sarah Lomax | I'll add that back into the schedule then.
+L0085 | - | Priya Nair | So to sum up, turnover eighty-five thousand pounds near enough, we're going with the cash basis, stove installs are zero-rated not exempt, and I need the payroll summary today and the stove invoice from Tom.
+L0086 | - | Sarah Lomax | That all sounds right from my side.
+L0087 | - | Tom Hartley | Same here.
+L0088 | - | Priya Nair | Great, I'll be in touch once the draft accounts are ready. Thanks both.
+L0089 | - | Tom Hartley | Thanks Priya.
+L0090 | - | Sarah Lomax | Thanks, bye.
+# TRIGGER INDEX: every entry below must be cited by a row or listed in not_mapped
+# L0009 figure "85k"
+# L0010 question "?"
+# L0013 figure "£85,000,"
+# L0017 question "?"
+# L0019 action "i'll"
+# L0024 question "?"
+# L0027 decision "agreed"
+# L0030 action "i'll"
+# L0032 question "?"
+# L0034 action "can you"
+# L0034 question "?"
+# L0036 action "we'll"
+# L0037 action "could you"
+# L0037 question "?"
+# L0039 action "we'll"
+# L0040 figure "4,200"
+# L0042 action "i'll try"
+# L0044 action "can you"
+# L0044 question "?"
+# L0045 action "i'll"
+# L0047 question "?"
+# L0050 question "?"
+# L0057 question "?"
+# L0060 decision "agreed"
+# L0060 decision "let's go with"
+# L0061 action "i'll"
+# L0062 action "i'll"
+# L0064 action "we'll"
+# L0067 figure "£1,412.50"
+# L0069 action "i'll"
+# L0070 action "i'll"
+# L0074 action "can you"
+# L0074 question "?"
+# L0075 action "i'll"
+# L0078 figure "20%"
+# L0080 question "?"
+# L0082 question "?"
+# L0084 action "i'll"
+# L0088 action "i'll"

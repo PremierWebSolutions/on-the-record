@@ -1,0 +1,75 @@
+{
+  "translator": "on-the-record",
+  "version": "1",
+  "source": {
+    "file": "ex2-teams.vtt",
+    "last_line": "L0003"
+  },
+  "meeting": {
+    "title": "not in source",
+    "date": "not in source",
+    "participants": [
+      "Lena Park",
+      "Unknown speaker",
+      "Omar Haddad"
+    ]
+  },
+  "actions": [
+    {
+      "id": "A1",
+      "kind": "requested",
+      "trigger": "could you",
+      "quote": "Could you update the client on the delay?",
+      "line": "L0001",
+      "speaker": "Lena Park",
+      "owner": "not in source",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A2",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "We'll confirm dates on Monday.",
+      "line": "L0003",
+      "speaker": "Omar Haddad",
+      "owner": "Omar Haddad",
+      "due_as_said": "on Monday",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "trigger": "agreed",
+      "quote": "Agreed, let's go with the phased launch.",
+      "line": "L0003",
+      "speaker": "Omar Haddad",
+      "corrections": []
+    }
+  ],
+  "figures": [
+    {
+      "id": "F1",
+      "token": "12.5k",
+      "quote": "The budget stays at 12.5k.",
+      "line": "L0002",
+      "speaker": "Unknown speaker",
+      "corrections": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "quote": "Could you update the client on the delay?",
+      "line": "L0001",
+      "speaker": "Lena Park",
+      "corrections": []
+    }
+  ],
+  "not_mapped": []
+}

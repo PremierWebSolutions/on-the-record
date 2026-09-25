@@ -1,0 +1,69 @@
+# on-the-record numbered transcript, version 1
+# source: project-kickoff.vtt | lines: 43 | format: L#### | mark | speaker | text
+L0001 | 00:00:05 | Sam Okafor | Morning everyone, thanks for jumping on, this is the kickoff for the Farrell Outdoors website rebuild.
+L0002 | 00:00:09 | Ben Farrell | Morning Sam, morning Nadia.
+L0003 | 00:00:12 | Nadia Chen | Morning Ben.
+L0004 | 00:00:15 | Sam Okafor | So just to set the scene, we're looking at a twelve week build starting this week.
+L0005 | 00:00:20 | Ben Farrell | Sounds good, that lines up with what we discussed.
+L0006 | 00:00:24 | Sam Okafor | Great. Let's start with the budget so everyone's on the same page.
+L0007 | 00:00:27 | Sam Okafor | The budget agreed is £12,500 for phase one.
+L0008 | 00:00:32 | Ben Farrell | Yep, that's what's in the signed proposal.
+L0009 | 00:00:35 | Nadia Chen | So call it 12.5k all in, covering design and build.
+L0010 | 00:00:39 | Ben Farrell | That's right.
+L0011 | 00:00:42 | Sam Okafor | We'd normally add a 10% contingency on top for scope changes, just so you're aware.
+L0012 | 00:00:48 | Ben Farrell | Understood, hopefully we won't need it.
+L0013 | 00:00:52 | Sam Okafor | Nadia, can you send over the moodboard by Wednesday?
+L0014 | 00:00:56 | Nadia Chen | Yes, I'll have that with you by Wednesday.
+L0015 | 00:01:00 | Sam Okafor | Perfect.
+L0016 | 00:01:03 | Sam Okafor | We'll send the sitemap by Wednesday as well, alongside the moodboard.
+L0017 | 00:01:08 | Ben Farrell | Great, that gives us something to react to early.
+L0018 | 00:01:12 | Nadia Chen | On the design side, we'll have the first full designs ready by the end of the month.
+L0019 | 00:01:18 | Ben Farrell | That works for us.
+L0020 | 00:01:20 | Ben Farrell | Could someone loop in our copywriter this week, she'll need the tone of voice doc?
+L0021 | 00:01:26 | Sam Okafor | Let's talk hosting next, that's the other big decision today.
+L0022 | 00:01:30 | Nadia Chen | We were assuming you'd stay on your current host, is that still the plan?
+L0023 | 00:01:34 | Ben Farrell | We're happy to stay where we are for now, we might revisit hosting after phase one.
+L0024 | 00:01:40 | Sam Okafor | Okay, let's go with the current host then, no migration needed.
+L0025 | 00:01:44 | Ben Farrell | Agreed, one less thing to worry about.
+L0026 | 00:01:47 | Sam Okafor | I might be able to get a first working draft over by Friday, no promises on that one.
+L0027 | 00:01:52 | Nadia Chen | I'll keep that in mind when I'm planning the week.
+L0028 | 00:01:56 | Unknown speaker | Sorry, can everyone hear me okay now?
+L0029 | 00:01:59 | Sam Okafor | Yep, you're clear now.
+L0030 | 00:02:01 | Ben Farrell | Loud and clear.
+L0031 | 00:02:03 | Sam Okafor | So on content, who's pulling together the product copy?
+L0032 | 00:02:07 | Ben Farrell | That's still with our marketing person, she's not on the call today.
+L0033 | 00:02:12 | Sam Okafor | Okay, we'll follow up separately on that.
+L0034 | 00:02:15 | Nadia Chen | Can I get access to your image library this week?
+L0035 | 00:02:19 | Ben Farrell | Yes, I'll set that up today.
+L0036 | 00:02:22 | Sam Okafor | Great, that's everything on assets then.
+L0037 | 00:02:25 | Sam Okafor | Let's confirm the next milestone, that's the sitemap and moodboard review.
+L0038 | 00:02:30 | Ben Farrell | Works for me.
+L0039 | 00:02:32 | Nadia Chen | We'll circulate the meeting notes by end of day.
+L0040 | 00:02:37 | Sam Okafor | Perfect, thanks everyone.
+L0041 | 00:02:40 | Ben Farrell | Thanks both, speak soon.
+L0042 | 00:02:43 | Nadia Chen | Bye.
+L0043 | 00:02:44 | Sam Okafor | Bye all.
+# TRIGGER INDEX: every entry below must be cited by a row or listed in not_mapped
+# L0007 decision "agreed"
+# L0007 figure "£12,500"
+# L0009 figure "12.5k"
+# L0011 figure "10%"
+# L0012 action "hopefully"
+# L0013 action "can you"
+# L0013 question "?"
+# L0014 action "i'll"
+# L0016 action "we'll"
+# L0018 action "we'll"
+# L0020 question "?"
+# L0022 question "?"
+# L0023 action "we might"
+# L0024 decision "let's go with"
+# L0025 decision "agreed"
+# L0026 action "i might"
+# L0027 action "i'll"
+# L0028 question "?"
+# L0031 question "?"
+# L0033 action "we'll"
+# L0034 question "?"
+# L0035 action "i'll"
+# L0039 action "we'll"

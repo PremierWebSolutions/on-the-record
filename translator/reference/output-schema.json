@@ -111,7 +111,7 @@
         "line": { "$ref": "#/$defs/line" },
         "category": { "enum": ["action", "decision", "figure", "question"] },
         "trigger": { "type": "string" },
-        "reason": { "enum": ["not_a_commitment", "hypothetical", "reported_speech", "repeat", "not_a_decision", "rhetorical", "inaudible", "label_or_reference"] },
+        "reason": { "enum": ["not_a_commitment", "hypothetical", "reported_speech", "repeat", "not_a_decision", "rhetorical", "inaudible", "label_or_reference", "procedural"] },
         "see_line": { "anyOf": [ { "$ref": "#/$defs/sentinel" }, { "$ref": "#/$defs/line" } ] }
       }
     }

@@ -45,6 +45,10 @@ A speaker hedges. A hedge is never upgraded to a commitment: if a line has a ten
 ```triggers:tentative
 i'll try
 i will try
+i'll probably
+i will probably
+we'll probably
+we will probably
 we'll try
 i'll see if
 we'll see if
@@ -107,5 +111,5 @@ A line containing a question mark is a question line.
 A figure is money, a percentage, a number with a thousands separator or a decimal point, or a number with a size word. Plain small integers, years and dates are not figures (a date that matters is caught through `due_as_said` on the action that carries it). The checker uses this exact pattern.
 
 ```pattern:figure
-[£$€]\s?\d[\d,]*(?:\.\d+)?(?:\s?(?:k|m|bn)\b)?|\b\d[\d,]*(?:\.\d+)?\s?(?:%|k\b|m\b|bn\b|percent\b|per cent\b|pounds\b|pence\b|p\b|thousand\b|million\b|grand\b)|\b\d{1,3}(?:,\d{3})+(?:\.\d+)?\b|\b\d+\.\d+\b
+[£$€]\s?\d(?:[\d,]*\d)?(?:\.\d+)?(?:\s?(?:k|m|bn|billion|million|thousand)\b)?|\b\d(?:[\d,]*\d)?(?:\.\d+)?\s?(?:%|k\b|m\b|bn\b|billion\b|million\b|thousand\b|percent\b|per cent\b|pounds\b|pence\b|p\b|grand\b)|\b\d{1,3}(?:,\d{3})+(?:\.\d+)?\b|\b\d+\.\d+\b
 ```

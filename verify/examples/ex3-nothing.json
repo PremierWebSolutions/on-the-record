@@ -1,0 +1,21 @@
+{
+  "translator": "on-the-record",
+  "version": "1",
+  "source": {
+    "file": "ex3-nothing.txt",
+    "last_line": "L0002"
+  },
+  "meeting": {
+    "title": "not in source",
+    "date": "not in source",
+    "participants": [
+      "Tanya",
+      "Raj"
+    ]
+  },
+  "actions": [],
+  "decisions": [],
+  "figures": [],
+  "questions": [],
+  "not_mapped": []
+}

@@ -1,0 +1,47 @@
+# on-the-record numbered transcript, version 1
+# source: pac-hmrc-2026-05-18.txt | lines: 17 | format: L#### | mark | speaker | text
+L0001 | - | (none) | Public Accounts Committee
+L0002 | - | (none) | Monday 18 May 2026
+L0003 | Q14 | Chair | We will probably come back to some of those issues in the rest of the session. Looking at the success, and the fact that every £1 spent brings in £95, why don’t you spend more?
+L0004 | - | John-Paul Marks | We are increasing the size of our organisation to, indeed, spend more to increase additional tax revenue. Through the last set of fiscal events, the Government have announced both 5,500 additional compliance officers and 2,400 additional debt officers. Taken together, that will bring additional tax revenues of £10 billion in ’29-30. For the out-turn for this financial year, compliance yield will be around £50 billion, which we think will be a record high, but it needs to increase by £10 billion a year by the end of this spending review period. That is not all driven by capacity; some of it is transformation, third-party data, risking—the team can say more about that—but a significant investment into capacity is being made.
+L0005 | Q15 | Chair | In terms of capacity, how much of that extra investment in staffing will go to the large business directorate?
+L0006 | - | Nicole Newbury | In the expansion that JP just mentioned—the 5,500 full-time equivalent members that our teams will grow by—because 60% of the tax gap stems from small business non-compliance, we are, understandably, growing initially into our small business compliance. As we bring people in and train them in our foundation learning, that will free up more capacity for experienced colleagues to work on more complex areas. Specifically, in relation to large business, we really welcome the NAO recommendation about exploring the expansion of the co-operative compliance approach. The NAO’s Report recognises that it was a really successful approach in terms of return on investment, so in response to that recommendation, from September we will launch three specific test and learns, which will enable us to really test the cost and value of the co-operative compliance approach to a greater proportion of our business colleagues.
+L0007 | Q16 | Chair | We will come on to the issue of spreading that approach to other aspects of your work. To come back to large businesses, how much extra resource are you putting into the large business directorate? That is the question that I asked.
+L0008 | - | John-Paul Marks | We do not have that number to hand, so we will have to write to you to give you the precise number. As Nicole says, a large proportion of the 5,500 will be focused on the higher volume, higher value compliance activity, which is necessary to ensure that we get the small business tax gap falling. We are increasing capacity in the complex case teams and the large business teams, but it is in the hundreds of headcount, not the thousands.
+L0009 | Q17 | Chair | Could you let us have the figures, then?
+L0010 | - | John-Paul Marks | We will give you the precise figures. It is in the hundreds.
+L0011 | - | Nicole Newbury | What we can say is that, last year, the first part of growing our compliance workforce was recruiting somewhere in the region of 40 to 50 external tax specialists to supplement the growth that we are training ourselves to focus on our priority tax risks. We are forecasting to do the same this year, and we are also growing that into other priority tax risk areas. It is relatively small compared with the 5,500, but it is absolutely focused on the areas that we think need it the most.
+L0012 | Q18 | Chair | So the £95 figure is going to go up in the future, is it?
+L0013 | - | John-Paul Marks | In terms of value for money and impact—
+L0014 | - | Chair | In terms of the amount that you collect for every £1 spent.
+L0015 | - | John-Paul Marks | We will see. If we add a bit more headcount, obviously, that increases the admin costs, but once it is productive we should ultimately see some more output. As we say, we have also got the large business tax gap down. To be honest, I suspect the value for money equation will stay relatively stable.
+L0016 | Q19 | Chair | But the amount collected will go up because you are putting more resources in.
+L0017 | - | John-Paul Marks | We expect our yield to increase from £50 billion to £60 billion per year by the end of this SR period.
+# TRIGGER INDEX: every entry below must be cited by a row or listed in not_mapped
+# L0003 action "we will"
+# L0003 figure "£1"
+# L0003 figure "£95,"
+# L0003 question "?"
+# L0004 figure "5,500"
+# L0004 figure "2,400"
+# L0004 figure "£10"
+# L0004 figure "£50"
+# L0004 figure "£10"
+# L0005 question "?"
+# L0006 figure "5,500"
+# L0006 figure "60%"
+# L0006 action "we will"
+# L0007 action "we will"
+# L0007 question "?"
+# L0008 action "we will"
+# L0008 figure "5,500"
+# L0009 action "could you"
+# L0009 question "?"
+# L0010 action "we will"
+# L0011 figure "5,500"
+# L0012 figure "£95"
+# L0012 question "?"
+# L0014 figure "£1"
+# L0015 action "we will"
+# L0017 figure "£50"
+# L0017 figure "£60"

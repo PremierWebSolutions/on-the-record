@@ -371,8 +371,15 @@ def check_pair(input_path, output_path, corrections_path=None, quiet=False):
 
 
 def selftest():
-    fixtures = sorted((ROOT / "verify" / "fixtures").glob("*.json"))
     bad = 0
+    examples = sorted((ROOT / "verify" / "examples").glob("*.json"))
+    for ex in examples:
+        src = next(p for p in ex.parent.glob(ex.stem + ".*") if p.suffix != ".json")
+        ok, results = check_pair(src, ex, quiet=True)
+        bad += 0 if ok else 1
+        print("  %-4s %-38s expect %-10s %s" % ("ok" if ok else "XX", "example " + ex.stem, "pass",
+                                                  "pass" if ok else "failed " + ",".join(g for g in GATES if results[g])))
+    fixtures = sorted((ROOT / "verify" / "fixtures").glob("*.json"))
     for f in fixtures:
         fx = json.loads(f.read_text(encoding="utf-8"))
         lines = parse_transcript((ROOT / fx["input"]).read_text(encoding="utf-8"))
@@ -387,7 +394,8 @@ def selftest():
             got = "caught by " + ",".join(failed) if failed else "NOT CAUGHT"
         bad += 0 if good else 1
         print("  %-4s %-38s expect %-10s %s" % ("ok" if good else "XX", f.stem, fx["expect"], got))
-    print("\n%d/%d fixtures behaved as declared" % (len(fixtures) - bad, len(fixtures)))
+    total = len(examples) + len(fixtures)
+    print("\n%d/%d examples and fixtures behaved as declared" % (total - bad, total))
     return bad == 0
 
 

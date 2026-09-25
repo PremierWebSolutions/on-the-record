@@ -1,0 +1,17 @@
+# on-the-record numbered transcript, version 1
+# source: quick-checkin.txt | lines: 14 | format: L#### | mark | speaker | text
+L0001 | - | Ellie | Morning Marcus.
+L0002 | - | Marcus | Morning Ellie, good weekend.
+L0003 | - | Ellie | Yeah quiet one, just pottered about in the garden.
+L0004 | - | Marcus | Nice weather for it at least.
+L0005 | - | Ellie | It was, the sun stuck around most of Saturday.
+L0006 | - | Marcus | We took the dog out to the woods on Sunday, he loved it.
+L0007 | - | Ellie | Bet he was worn out after that.
+L0008 | - | Marcus | Completely flat for the rest of the evening.
+L0009 | - | Ellie | Same here, watched a film and had an early night.
+L0010 | - | Marcus | An early night felt like the right move.
+L0011 | - | Ellie | The coffee machine upstairs is fixed now by the way.
+L0012 | - | Marcus | Good, it has been out for ages.
+L0013 | - | Ellie | Someone from facilities came round and sorted it this morning.
+L0014 | - | Marcus | Small win for the office, right, back to it.
+# TRIGGER INDEX: every entry below must be cited by a row or listed in not_mapped
