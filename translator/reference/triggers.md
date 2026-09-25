@@ -6,7 +6,7 @@ A line that contains no trigger of a kind cannot produce a row of that kind. A l
 
 ## Why these lists
 
-Real commitments are rare in meetings. In the ICSI meeting corpus the dialogue-act tag for a speaker committing to a future action covers well under one percent of utterances, and action-item research treats the owner as something to be read off the utterance, never guessed from context. So the translator separates three things that summarisers blur together: a speaker taking something on (`committed`), a speaker asking someone else to (`requested`), and a speaker hedging (`tentative`). Sources are listed in [../../evidence/SOURCES.md](../../evidence/SOURCES.md).
+Real commitments are rare in meetings. In a public release of the ICSI meeting corpus the dialogue-act tag for a speaker committing to a future action covers 0.34% of utterances, and action-item research annotates the owner as its own part of the utterance rather than guessing it from context. So the translator separates three things that summarisers blur together: a speaker taking something on (`committed`), a speaker asking someone else to (`requested`), and a speaker hedging (`tentative`). Sources are listed in [../../evidence/SOURCES.md](../../evidence/SOURCES.md).
 
 ## Actions
 
