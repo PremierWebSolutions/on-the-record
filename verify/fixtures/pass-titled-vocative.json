@@ -1,0 +1,38 @@
+{
+  "input": "verify/fixtures/inputs/pass-titled-vocative.txt",
+  "expect": "pass",
+  "why": "Tom Hartley's reply is on the acceptance list with no refusal marker, so he owns the request under his own speaker label, matching the title he was addressed by.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "pass-titled-vocative.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Priya", "Tom Hartley"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Mr Hartley, can you sign the letter?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "owner": "Tom Hartley",
+        "due_as_said": "not in source",
+        "accepted_line": "L0002",
+        "accepted_quote": "Leave it with me.",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Mr Hartley, can you sign the letter?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      }
+    ],
+    "not_mapped": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": "verify/fixtures/inputs/goingwith.txt",
+  "expect": "coverage",
+  "why": "'we're going with' is a decision phrase; leaving it out of decisions and not_mapped drops a real decision.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": {
+      "file": "goingwith.txt",
+      "last_line": "L0002"
+    },
+    "meeting": {
+      "title": "not in source",
+      "date": "not in source",
+      "participants": [
+        "Priya",
+        "Tom"
+      ]
+    },
+    "actions": [],
+    "decisions": [],
+    "figures": [],
+    "questions": [],
+    "not_mapped": []
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "input": "verify/fixtures/inputs/fail-source-file-mismatch.txt",
+  "expect": "shape",
+  "why": "source.file must name the input actually translated; the forged value names an unrelated file that was never read.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "inputs/quick-checkin.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Priya", "Tom"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Can you send the notes?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "owner": "Tom",
+        "due_as_said": "not in source",
+        "accepted_line": "L0002",
+        "accepted_quote": "Will do.",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Can you send the notes?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      }
+    ],
+    "not_mapped": []
+  }
+}

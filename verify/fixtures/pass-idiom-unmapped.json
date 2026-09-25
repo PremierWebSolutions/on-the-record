@@ -1,0 +1,18 @@
+{
+  "input": "verify/fixtures/inputs/pass-idiom-unmapped.txt",
+  "expect": "pass",
+  "why": "'I'll be honest' is the idiom on the list, so the 'i'll' trigger is not_mapped as not_a_commitment and no action row exists.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "pass-idiom-unmapped.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Tom", "Priya"] },
+    "actions": [],
+    "decisions": [],
+    "figures": [],
+    "questions": [],
+    "not_mapped": [
+      { "line": "L0001", "category": "action", "trigger": "i'll", "reason": "not_a_commitment", "see_line": "not in source" }
+    ]
+  }
+}

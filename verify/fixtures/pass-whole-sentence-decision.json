@@ -1,0 +1,25 @@
+{
+  "input": "verify/fixtures/inputs/pass-whole-sentence-decision.txt",
+  "expect": "pass",
+  "why": "A whole-sentence quote is required even though 'agreed' is negated within it; classification of the row is the translator's call, not the checker's.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "pass-whole-sentence-decision.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Sam", "Lena"] },
+    "actions": [],
+    "decisions": [
+      {
+        "id": "D1",
+        "trigger": "agreed",
+        "quote": "We haven't agreed on the budget yet, so let's park it until next week.",
+        "line": "L0001",
+        "speaker": "Sam",
+        "corrections": []
+      }
+    ],
+    "figures": [],
+    "questions": [],
+    "not_mapped": []
+  }
+}

@@ -94,6 +94,32 @@ def mark_line(text, spans):
 
 def esc(v):
     return html.escape(str(v), quote=True)
+CORRECTIONS = {}  # C001 -> (heard, meant), from --corrections; user assertions, shown not verified
+
+
+def load_corrections(path):
+    table, n = {}, 0
+    for ln in open(path, encoding="utf-8").read().splitlines():
+        if ln.strip() and not ln.startswith("#") and "=>" in ln:
+            n += 1
+            heard, meant = [x.strip() for x in ln.split("=>", 1)]
+            table["C%03d" % n] = (heard, meant)
+    return table
+
+
+def corrections_note(item, html_out):
+    """What the user says a heard form meant, labelled as their assertion."""
+    notes = []
+    for cid in item.get("corrections", []):
+        if cid in CORRECTIONS:
+            heard, meant = CORRECTIONS[cid]
+            text = "%s: heard \"%s\", user says \"%s\" (not verified)" % (cid, heard, meant)
+        else:
+            text = "%s: corrections file not supplied" % cid
+        notes.append(esc(text) if html_out else text)
+    return ("<br>" if html_out else " ") + "; ".join(notes) if notes else ""
+
+
 def cite(line_id, speaker):  # plain-text citation, e.g. "L0004 \u00b7 Dana Okoro"
     return "%s \u00b7 %s" % (line_id, speaker)
 def cite_link(line_id, speaker):  # same citation as an HTML anchor to #<line_id>
@@ -108,6 +134,7 @@ def action_row(a, html_out):
         accepted = esc(a["accepted_quote"]) if html_out else a["accepted_quote"]
         quote += '<br>Accepted: "%s"' % accepted
         cited += "<br>" + (line_link(a["accepted_line"]) if html_out else a["accepted_line"])
+    quote += corrections_note(a, html_out)
     kind, owner, due = a["kind"], a["owner"], a["due_as_said"]
     if html_out:
         kind, owner, due = esc(kind), esc(owner), esc(due)
@@ -116,6 +143,7 @@ def cited_row(item, html_out, extra=None):
     """A decision/figure/question row: an optional lead field, the quote, its citation."""
     quote = '"%s"' % (esc(item["quote"]) if html_out else item["quote"])
     cited = cite_link(item["line"], item["speaker"]) if html_out else cite(item["line"], item["speaker"])
+    quote += corrections_note(item, html_out)
     lead = [] if extra is None else [esc(item[extra]) if html_out else item[extra]]
     return lead + [quote, cited]
 def unmapped_row(u, html_out):
@@ -238,7 +266,10 @@ def main(argv=None):
     ap.add_argument("--output", required=True, help="translator JSON record to render")
     ap.add_argument("--md", help="write the Markdown file note to this path")
     ap.add_argument("--html", help="write the HTML view to this path")
+    ap.add_argument("--corrections", help="the user's corrections file, if one was given to the translator")
     args = ap.parse_args(argv)
+    if args.corrections:
+        CORRECTIONS.update(load_corrections(args.corrections))
     lines = parse_transcript(Path(args.input).read_text(encoding="utf-8"))
     out = json.loads(Path(args.output).read_text(encoding="utf-8"))
     markdown = build_markdown(out)

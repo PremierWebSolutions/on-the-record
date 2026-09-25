@@ -1,0 +1,20 @@
+{
+  "input": "verify/fixtures/inputs/fail-meeting-date-midcall.txt",
+  "expect": "shape",
+  "why": "An unlabelled line after a speaker continues that speaker, so L0003 is Priya's line, not a header; a date may only be cited from a speaker '(none)' header line, and the forged date cites L0003 anyway.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-meeting-date-midcall.txt", "last_line": "L0003" },
+    "meeting": {
+      "title": { "quote": "Board catch-up", "line": "L0001", "speaker": "(none)" },
+      "date": { "quote": "Recorded on 14 March 2026", "line": "L0003", "speaker": "Priya" },
+      "participants": ["Priya"]
+    },
+    "actions": [],
+    "decisions": [],
+    "figures": [],
+    "questions": [],
+    "not_mapped": []
+  }
+}

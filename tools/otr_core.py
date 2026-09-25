@@ -28,8 +28,13 @@ def load_lexicons(path=TRIGGERS_FILE):
     return lists, patterns
 
 
+ZERO_WIDTH = "\u200b\u200c\u200d\u2060\ufeff"
+
+
 def norm(s):
-    """Typography only: quotes, dashes, whitespace. Never letters or digits."""
+    """Typography only: quotes, dashes, whitespace, invisible characters. Never letters or digits."""
+    for zw in ZERO_WIDTH:
+        s = s.replace(zw, "")
     s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
     s = s.replace("–", "-").replace("—", "-").replace(" ", " ")
     return re.sub(r"\s+", " ", s).strip()
@@ -52,8 +57,12 @@ class Line:
 
     def __init__(self, n, mark, speaker, text):
         self.id = "L%04d" % n
-        self.mark = mark or NO_MARK
-        self.speaker = speaker or NO_SPEAKER
+        # A "|" inside a captured mark or speaker label (e.g. a WebVTT voice
+        # tag `<v Alice | CFO>`) would collide with the " | " field
+        # separator used by canonical(); swap it for "/" at parse time so
+        # translator and checker always see the same, unambiguous label.
+        self.mark = (mark or NO_MARK).replace("|", "/")
+        self.speaker = (speaker or NO_SPEAKER).replace("|", "/")
         self.text = text
 
     def canonical(self):
@@ -61,13 +70,69 @@ class Line:
 
 
 TS = r"\d{1,2}:\d{2}(?::\d{2})?(?:[.,]\d+)?"
+# Speaker-label character classes are Unicode-aware: the first character is
+# any letter (any script, via [^\W\d_]), continuation characters are any
+# word character (letters/digits/underscore, again Unicode-aware) plus the
+# punctuation and space a label may legitimately contain.
+#
+# LABEL has two alternative shapes, since Python's re forbids reusing a
+# group name across alternatives (so the second shape uses spk2/ts2/text2 —
+# see _match_label, which folds whichever branch matched back onto one
+# shape):
+#   1. mark (if any) before the name: "[00:12:07] Priya Nair: text",
+#      "Q12 Priya Nair: text", plain "Priya Nair: text".
+#   2. mark after the name, in brackets or parens, immediately before the
+#      colon (Rev.com / Fireflies style): "Priya Nair (00:12:07): text".
+# Either shape may carry a leading list marker ("- ", "• ", "* ").
 LABEL = re.compile(
-    r"^(?:\[?(?P<ts>" + TS + r")\]?\s*(?:[-–]\s*)?)?"
+    r"^(?:[-•*]\s*)?(?:"
+    r"(?:[\[(]?(?P<ts>" + TS + r")[\])]?\s*(?:[-–]\s*)?)?"
     r"(?:(?P<q>Q\d+)\s+)?"
-    r"(?P<spk>[A-Za-z][A-Za-z0-9.'’()&\- ]{0,47}?):\s+(?P<text>\S.*)$"
+    r"(?P<spk>[^\W\d_][\w.'’()&\- ]{0,63}?):\s+(?P<text>\S.*)"
+    r"|"
+    r"(?P<spk2>[^\W\d_][\w.'’&\- ]{0,63}?)\s*[\[(](?P<ts2>" + TS + r")[\])]\s*:\s+(?P<text2>\S.*)"
+    r")$"
 )
-OTTER_HEADER = re.compile(r"^(?P<spk>[A-Za-z][^:]{0,47}?)\s{2,}(?P<ts>\d{1,2}:\d{2}(?::\d{2})?)\s*$")
+
+
+def _match_label(s):
+    """Match LABEL and return {"spk", "q", "ts", "text"}, or None.
+
+    Normalises whichever of LABEL's two alternative branches matched (see
+    LABEL's comment) onto one set of keys, so callers never need to know
+    which branch fired.
+    """
+    m = LABEL.match(s)
+    if not m:
+        return None
+    if m.group("spk") is not None:
+        return {"spk": m.group("spk"), "q": m.group("q"), "ts": m.group("ts"), "text": m.group("text")}
+    return {"spk": m.group("spk2"), "q": None, "ts": m.group("ts2"), "text": m.group("text2")}
+
+
+# Otter-style header line: speaker and timestamp on their own line, e.g.
+# "Priya Nair  0:42". Accepts the same timestamp shapes LABEL does
+# (including fractional seconds, "0:03.250") plus an optional AM/PM tail,
+# for Google Meet / Gemini exports ("Tom Hartley  10:03 AM").
+OTTER_HEADER = re.compile(
+    r"^(?P<spk>[^\W\d_][^:]{0,63}?)\s{2,}(?P<ts>" + TS + r")\s*(?:[AaPp]\.?[Mm]\.?)?\s*$"
+)
 CANONICAL = re.compile(r"^L(\d{4}) \| ")
+
+# Label words that introduce an annotation, not a new speaker: a plain-text
+# line such as "Action: I'll send the statements by Friday." keeps its full
+# text (label included) and stays with whoever is currently speaking, or
+# "(none)" before anyone has spoken. Matched case-insensitively against the
+# WHOLE candidate label (not a substring of it). Plain "Name:" text has no
+# way to be made airtight against every possible section header a transcript
+# might use — this list covers the ones seen in practice, documented here
+# and in input-format.md so translator and checker never disagree.
+NEVER_SPEAKERS = frozenset({
+    "action", "action item", "action items", "note", "notes", "decision", "decisions",
+    "update", "reminder", "follow-up", "fyi", "re", "correction", "aside", "summary",
+    "recap", "minutes", "agenda", "apologies", "attendees", "present", "oral evidence",
+    "witnesses", "members present", "date", "time", "location", "subject", "title",
+})
 
 
 def _clean_ts(ts):
@@ -79,7 +144,9 @@ def _clean_ts(ts):
 
 def _valid_speaker(spk):
     spk = spk.strip()
-    return 0 < len(spk) <= 48 and len(spk.split()) <= 5 and not spk.endswith(".")
+    if not (0 < len(spk) <= 64 and len(spk.split()) <= 8 and not spk.endswith(".")):
+        return False
+    return spk.lower() not in NEVER_SPEAKERS
 
 
 def parse_transcript(text):
@@ -113,19 +180,22 @@ def _parse_plain(raw):
             continue
         m_hdr = OTTER_HEADER.match(s.strip())
         if m_hdr and _valid_speaker(m_hdr.group("spk")):
-            header_speaker, header_ts = m_hdr.group("spk").strip(), m_hdr.group("ts")
+            header_speaker, header_ts = m_hdr.group("spk").strip(), _clean_ts(m_hdr.group("ts"))
             current = header_speaker
             continue
-        m = LABEL.match(s.strip())
-        if m and _valid_speaker(m.group("spk")):
-            current = m.group("spk").strip()
-            mark = m.group("q") or _clean_ts(m.group("ts"))
-            out.append(Line(len(out) + 1, mark, current, m.group("text").strip()))
+        m = _match_label(s.strip())
+        if m and _valid_speaker(m["spk"]):
+            current = m["spk"].strip()
+            mark = m["q"] or _clean_ts(m["ts"])
+            out.append(Line(len(out) + 1, mark, current, m["text"].strip()))
             header_ts = None
         else:
             mark = header_ts
             out.append(Line(len(out) + 1, mark, current, s.strip()))
     return out
+
+
+VOICE_TAG_OPEN = re.compile(r"<v(?:\.[^\s>]*)?\s+([^>]+)>")
 
 
 def _parse_vtt(raw):
@@ -137,6 +207,7 @@ def _parse_vtt(raw):
         elif block:
             blocks.append(block)
             block = []
+    prev_speaker = None
     for b in blocks:
         t = next((i for i, x in enumerate(b) if "-->" in x), None)
         if t is None:
@@ -146,17 +217,33 @@ def _parse_vtt(raw):
         if start and start.count(":") == 1:
             start = "00:" + start
         payload = " ".join(b[t + 1:])
-        speaker, text = None, payload
-        mv = re.match(r"^<v(?:\.[^\s>]*)?\s+([^>]+)>(.*)$", payload)
-        if mv:
-            speaker, text = mv.group(1).strip(), mv.group(2)
-        text = re.sub(r"</?[^>]+>", "", text).strip()
-        if not mv:
-            m = LABEL.match(text)
-            if m and _valid_speaker(m.group("spk")):
-                speaker, text = m.group("spk").strip(), m.group("text").strip()
+        tags = list(VOICE_TAG_OPEN.finditer(payload))
+        if tags:
+            # One numbered line per <v> segment (same cue, same mark), so a
+            # cue that switches speaker mid-cue (`<v Alice>…</v> <v Bob>…</v>`)
+            # never credits both segments to the first speaker.
+            for i, tag in enumerate(tags):
+                seg_end = tags[i + 1].start() if i + 1 < len(tags) else len(payload)
+                segment = payload[tag.end():seg_end]
+                text = re.sub(r"</?[^>]+>", "", segment).strip()
+                if not text:
+                    continue
+                speaker = tag.group(1).strip()
+                out.append(Line(len(out) + 1, start, speaker, text))
+                prev_speaker = speaker
+            continue
+        text = re.sub(r"</?[^>]+>", "", payload).strip()
+        m = _match_label(text)
+        if m and _valid_speaker(m["spk"]):
+            speaker, text = m["spk"].strip(), m["text"].strip()
+        else:
+            # No voice tag and no "Name:" prefix: this cue continues whoever
+            # spoke last, exactly like unlabelled plain text, not "(none)".
+            speaker = prev_speaker
         if text:
             out.append(Line(len(out) + 1, start, speaker, text))
+        if speaker:
+            prev_speaker = speaker
     return out
 
 # ---------------------------------------------------------- trigger index

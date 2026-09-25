@@ -1,0 +1,31 @@
+{
+  "input": "verify/fixtures/inputs/fail-corrections-substring.txt",
+  "corrections": "verify/fixtures/inputs/substring.corrections.txt",
+  "expect": "corrections",
+  "why": "The heard form 'I' is not a whole word inside \"I'll\", so C001 does not apply to this row; the forged version cites it anyway on a substring match.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-corrections-substring.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Priya", "Tom"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "committed",
+        "trigger": "i'll",
+        "quote": "I'll send the report by Friday.",
+        "line": "L0001",
+        "speaker": "Priya",
+        "owner": "Priya",
+        "due_as_said": "by Friday",
+        "accepted_line": "not in source",
+        "accepted_quote": "not in source",
+        "corrections": ["C001"]
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [],
+    "not_mapped": []
+  }
+}

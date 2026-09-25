@@ -12,7 +12,7 @@
       "speaker": "(none)"
     },
     "date": {
-      "quote": "14 March 2026",
+      "quote": "Recorded on 14 March 2026",
       "line": "L0002",
       "speaker": "(none)"
     },
@@ -27,7 +27,7 @@
       "id": "A1",
       "kind": "committed",
       "trigger": "i'll",
-      "quote": "Okay, I'll keep it under Halden Timber in the notes.",
+      "quote": "I'll keep it under Halden Timber in the notes.",
       "line": "L0019",
       "speaker": "Priya Nair",
       "owner": "Priya Nair",
@@ -64,6 +64,19 @@
     },
     {
       "id": "A4",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "we'll need his UTR for the return, but let's move on to the van.",
+      "line": "L0036",
+      "speaker": "Priya Nair",
+      "owner": "Priya Nair",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A5",
       "kind": "requested",
       "trigger": "could you",
       "quote": "Could you check whether the van was bought on finance?",
@@ -76,7 +89,20 @@
       "corrections": []
     },
     {
-      "id": "A5",
+      "id": "A6",
+      "kind": "committed",
+      "trigger": "we'll",
+      "quote": "we'll pick the roof cost up separately in a minute.",
+      "line": "L0039",
+      "speaker": "Priya Nair",
+      "owner": "Priya Nair",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A7",
       "kind": "tentative",
       "trigger": "i'll try",
       "quote": "I'll try to get the mileage log over by the end of next week, it's not quite finished.",
@@ -89,7 +115,7 @@
       "corrections": []
     },
     {
-      "id": "A6",
+      "id": "A8",
       "kind": "requested",
       "trigger": "can you",
       "quote": "Can you send me the payroll summary?",
@@ -102,10 +128,23 @@
       "corrections": []
     },
     {
-      "id": "A7",
+      "id": "A9",
       "kind": "committed",
       "trigger": "i'll",
-      "quote": "Great, I'll note that as the decision for the file.",
+      "quote": "I'll do that today.",
+      "line": "L0045",
+      "speaker": "Sarah Lomax",
+      "owner": "Sarah Lomax",
+      "due_as_said": "today",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A10",
+      "kind": "committed",
+      "trigger": "i'll",
+      "quote": "I'll note that as the decision for the file.",
       "line": "L0061",
       "speaker": "Priya Nair",
       "owner": "Priya Nair",
@@ -115,7 +154,7 @@
       "corrections": []
     },
     {
-      "id": "A8",
+      "id": "A11",
       "kind": "committed",
       "trigger": "i'll",
       "quote": "I'll send you the bank statements by Friday, the ones I copied over for the audit trail.",
@@ -128,7 +167,7 @@
       "corrections": []
     },
     {
-      "id": "A9",
+      "id": "A12",
       "kind": "committed",
       "trigger": "we'll",
       "quote": "We'll get the draft accounts to you in about three weeks.",
@@ -141,10 +180,10 @@
       "corrections": []
     },
     {
-      "id": "A10",
+      "id": "A13",
       "kind": "committed",
       "trigger": "i'll",
-      "quote": "Got it, I'll move that across.",
+      "quote": "I'll move that across.",
       "line": "L0069",
       "speaker": "Sarah Lomax",
       "owner": "Sarah Lomax",
@@ -154,7 +193,7 @@
       "corrections": []
     },
     {
-      "id": "A11",
+      "id": "A14",
       "kind": "requested",
       "trigger": "can you",
       "quote": "One more thing on dates, the AGM paperwork, I've got a note here saying the 31st of June, can you confirm that?",
@@ -167,10 +206,10 @@
       "corrections": []
     },
     {
-      "id": "A12",
+      "id": "A15",
       "kind": "committed",
       "trigger": "i'll",
-      "quote": "I think that's just a typo somewhere, I'll check the actual date.",
+      "quote": "I'll check the actual date.",
       "line": "L0075",
       "speaker": "Sarah Lomax",
       "owner": "Sarah Lomax",
@@ -180,7 +219,7 @@
       "corrections": []
     },
     {
-      "id": "A13",
+      "id": "A16",
       "kind": "committed",
       "trigger": "i'll",
       "quote": "I'll add that back into the schedule then.",
@@ -193,10 +232,10 @@
       "corrections": []
     },
     {
-      "id": "A14",
+      "id": "A17",
       "kind": "committed",
       "trigger": "i'll",
-      "quote": "Great, I'll be in touch once the draft accounts are ready.",
+      "quote": "I'll be in touch once the draft accounts are ready.",
       "line": "L0088",
       "speaker": "Priya Nair",
       "owner": "Priya Nair",
@@ -236,7 +275,7 @@
     {
       "id": "F2",
       "token": "£85,000",
-      "quote": "So just to confirm the figure for the file, that's £85,000, give or take.",
+      "quote": "that's £85,000, give or take.",
       "line": "L0013",
       "speaker": "Priya Nair",
       "corrections": []
@@ -292,7 +331,7 @@
       "id": "Q4",
       "quote": "[inaudible] about the stove supplier invoice, did that come through?",
       "line": "L0032",
-      "speaker": "Tom Hartley",
+      "speaker": "Priya Nair",
       "corrections": []
     },
     {
@@ -360,20 +399,6 @@
     }
   ],
   "not_mapped": [
-    {
-      "line": "L0036",
-      "category": "action",
-      "trigger": "we'll",
-      "reason": "not_a_commitment",
-      "see_line": "not in source"
-    },
-    {
-      "line": "L0039",
-      "category": "action",
-      "trigger": "we'll",
-      "reason": "procedural",
-      "see_line": "not in source"
-    },
     {
       "line": "L0070",
       "category": "action",

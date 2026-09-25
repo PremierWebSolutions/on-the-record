@@ -1,0 +1,25 @@
+{
+  "input": "verify/fixtures/inputs/fail-negation-dropped.txt",
+  "expect": "trigger",
+  "why": "The quote must run the whole sentence so the 'haven't' that negates 'agreed' travels with it; the forged quote starts right at the trigger and drops the negation.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-negation-dropped.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Sam", "Lena"] },
+    "actions": [],
+    "decisions": [
+      {
+        "id": "D1",
+        "trigger": "agreed",
+        "quote": "agreed on the budget yet, so let's park it until next week.",
+        "line": "L0001",
+        "speaker": "Sam",
+        "corrections": []
+      }
+    ],
+    "figures": [],
+    "questions": [],
+    "not_mapped": []
+  }
+}

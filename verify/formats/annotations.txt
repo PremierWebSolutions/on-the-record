@@ -1,0 +1,6 @@
+Attendees: Priya Nair, Tom Reyes
+Priya Nair: The numbers are looking better this quarter.
+Action: I'll send you the bank statements by Friday.
+Note: this covers Q1 only.
+Tom Reyes: Thanks, that's helpful.
+Decision: we will move the review to Monday.

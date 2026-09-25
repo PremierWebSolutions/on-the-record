@@ -1,0 +1,40 @@
+{
+  "input": "verify/fixtures/inputs/fail-owner-june.txt",
+  "expect": "owner",
+  "why": "Tom hedges with an idiom, not an acceptance, so the request has no owner; the forged value invents one from the date mentioned earlier in the same line.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-owner-june.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Priya", "Tom"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "I've got a note saying the 31st of June, can you confirm that?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "owner": "June",
+        "due_as_said": "not in source",
+        "accepted_line": "not in source",
+        "accepted_quote": "not in source",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "I've got a note saying the 31st of June, can you confirm that?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      }
+    ],
+    "not_mapped": [
+      { "line": "L0002", "category": "action", "trigger": "let me", "reason": "not_a_commitment", "see_line": "not in source" }
+    ]
+  }
+}

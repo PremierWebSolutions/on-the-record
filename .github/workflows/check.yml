@@ -12,3 +12,5 @@ jobs:
         run: python3 verify/check.py --selftest
       - name: Every published run
         run: python3 verify/check.py --matrix
+      - name: Every documented transcript format
+        run: python3 verify/test_formats.py

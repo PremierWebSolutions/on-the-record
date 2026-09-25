@@ -8,7 +8,7 @@ Each row names the line, what a careless note-taker does with it, and what the c
 |---|---|---|
 | L0008 | "we will have to write to you to give you the precise number" | Committed action, owner John-Paul Marks, due `not in source`. |
 | L0008, L0010 | "in the hundreds" is all the witness gives | No number appears anywhere. The figure pattern does not match it and nothing is filled in. |
-| L0009 | "Could you let us have the figures, then?" | Requested action. The next turn ("We will give you the precise figures.") has no acceptance phrase, so the owner is `not in source`, and L0010 is recorded as its own commitment. |
+| L0009 | "Could you let us have the figures, then?" | Requested action. The next turn by another speaker, "We will give you the precise figures.", takes it on with a commitment phrase, so it is the acceptance: owner John-Paul Marks, `accepted_line` L0010. |
 | L0006 | "from September we will launch three specific test and learns" | Committed, owner Nicole Newbury, due "from September". No year is added. |
 | L0004 | "£10 billion in ’29-30" | Figure "£10 billion" as printed. The year is not reformatted. |
 | L0017 | "We expect our yield to increase" | An expectation, not a commitment. No trigger, no action. |

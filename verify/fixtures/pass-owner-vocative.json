@@ -1,0 +1,48 @@
+{
+  "input": "verify/fixtures/inputs/pass-owner-vocative.txt",
+  "expect": "pass",
+  "why": "The request opens with its addressee named, so Tom owns it directly; Sarah's line is her own unrelated commitment, not an acceptance of Priya's request.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": {
+      "file": "pass-owner-vocative.txt",
+      "last_line": "L0002"
+    },
+    "meeting": {
+      "title": "not in source",
+      "date": "not in source",
+      "participants": [
+        "Priya",
+        "Sarah"
+      ]
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Tom, can you dig out the stove invoice?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "owner": "Tom",
+        "due_as_said": "not in source",
+        "accepted_line": "not in source",
+        "accepted_quote": "not in source",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Tom, can you dig out the stove invoice?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      }
+    ],
+    "not_mapped": []
+  }
+}

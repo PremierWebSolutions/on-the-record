@@ -1,0 +1,38 @@
+{
+  "input": "verify/fixtures/inputs/fail-acceptance-unrelated.txt",
+  "expect": "owner",
+  "why": "Bare 'yes' plus an unrelated remark accepts nothing, so the owner stays not in source; the forged version treats the bare agreement as a taken-on task.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-acceptance-unrelated.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Alice", "Bob"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Can you send the draft?",
+        "line": "L0001",
+        "speaker": "Alice",
+        "owner": "Bob",
+        "due_as_said": "not in source",
+        "accepted_line": "L0002",
+        "accepted_quote": "Yes, the office is open.",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Can you send the draft?",
+        "line": "L0001",
+        "speaker": "Alice",
+        "corrections": []
+      }
+    ],
+    "not_mapped": []
+  }
+}

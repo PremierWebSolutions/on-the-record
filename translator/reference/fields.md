@@ -8,7 +8,7 @@ The machine-readable contract is [output-schema.json](output-schema.json). This 
 |---|---|
 | `translator` | Always `on-the-record`. |
 | `version` | Always `1`. |
-| `source.file` | The input file name as given. |
+| `source.file` | The input file name as given. Must match the transcript this record is actually checked against, and — for a filed run — the run's own filename. |
 | `source.last_line` | The id of the transcript's last numbered line, so a truncated read is visible. |
 | `meeting` | Title, date, participants. |
 | `actions` | Commitments, requests and hedges. |
@@ -30,7 +30,7 @@ The machine-readable contract is [output-schema.json](output-schema.json). This 
 
 | Field | Meaning |
 |---|---|
-| `title` | `{quote, line, speaker}` from an unlabelled header line before anyone speaks, or `not in source`. |
+| `title` | `{quote, line, speaker}` from an unlabelled header line before anyone speaks — the cited line must come before the first line carrying a real speaker label — or `not in source`. |
 | `date` | Same. The date exactly as written or said, never reformatted. |
 | `participants` | Every speaker label in order of first appearance. |
 
@@ -41,8 +41,8 @@ The machine-readable contract is [output-schema.json](output-schema.json). This 
 | `id` | `A1`, `A2`… in transcript order. |
 | `kind` | `committed`: the speaker takes it on. `requested`: the speaker asks someone else. `tentative`: the speaker hedges. |
 | `trigger` | The entry from [triggers.md](triggers.md) that matched, exactly as listed there. |
-| `owner` | `committed`/`tentative`: the speaker. `requested`: the speaker of the accepting line, or the addressee named on the line, or `not in source`. |
-| `due_as_said` | The due words as said ("by Friday"), or `not in source`. Never a calculated date. |
+| `owner` | `committed`/`tentative`: the speaker. `requested`: the speaker of the accepting line, or — with no acceptance — the addressee named as a sentence-opening vocative ("Tom, can you…"), exactly as spelled, or `not in source`. A name anywhere else in the sentence (a bystander, the object of the request, a date) is never an owner. |
+| `due_as_said` | The due words as said ("by Friday"), or `not in source`. Never a calculated date. Never taken from words immediately preceded by a negation ("not", "n't", "never"), and always in the same sentence as the words that gave it. |
 | `accepted_line` | For an accepted request: the next line by a different speaker. Otherwise `not in source`. |
 | `accepted_quote` | The accepting words from that line. Otherwise `not in source`. |
 
@@ -58,7 +58,7 @@ The machine-readable contract is [output-schema.json](output-schema.json). This 
 | Field | Meaning |
 |---|---|
 | `id` | `F1`, `F2`… |
-| `token` | The number exactly as transcribed ("85k", "£1,412.50", "twenty percent"), inside the quote. |
+| `token` | The number exactly as transcribed ("85k", "£1,412.50", "twenty percent"), inside the quote. Cited whole, never a fragment of a longer figure (a stray digit, a truncated thousands group, a dropped currency symbol, minus sign or decimal point). A spelled-out token is a whole word in its quote. |
 
 ## `questions[]`
 
@@ -75,7 +75,7 @@ The quote includes the question mark. Whether the question was answered is not r
 | `line` | The line the trigger is on. |
 | `category` | `action`, `decision`, `figure` or `question`. |
 | `trigger` | The trigger exactly as the index shows it. |
-| `reason` | One of: `not_a_commitment`, `hypothetical`, `reported_speech`, `repeat`, `not_a_decision`, `rhetorical`, `inaudible`, `label_or_reference`, `procedural`. |
+| `reason` | One of: `not_a_commitment` (also covers a trigger inside one of the fixed idioms in [triggers.md](triggers.md)), `hypothetical`, `reported_speech` (a reporting frame — "Tom said…" — or the trigger inside quotation marks), `repeat`, `not_a_decision`, `rhetorical`, `inaudible`, `label_or_reference`, `procedural`. |
 | `see_line` | For `repeat`, the earlier line where it was recorded. Otherwise `not in source`. |
 
 ## What the contract has no place for

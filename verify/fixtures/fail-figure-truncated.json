@@ -1,0 +1,34 @@
+{
+  "input": "verify/fixtures/inputs/fail-figure-truncated.txt",
+  "expect": "trace",
+  "why": "The whole figure on the line is '£12,500'; the forged token '12' is a truncated fragment of it, dropping the currency symbol and the thousands grouping.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-figure-truncated.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Sam", "Lena"] },
+    "actions": [],
+    "decisions": [
+      {
+        "id": "D1",
+        "trigger": "agreed",
+        "quote": "The budget agreed is £12,500 for phase one.",
+        "line": "L0001",
+        "speaker": "Sam",
+        "corrections": []
+      }
+    ],
+    "figures": [
+      {
+        "id": "F1",
+        "token": "12",
+        "quote": "The budget agreed is £12,500 for phase one.",
+        "line": "L0001",
+        "speaker": "Sam",
+        "corrections": []
+      }
+    ],
+    "questions": [],
+    "not_mapped": []
+  }
+}

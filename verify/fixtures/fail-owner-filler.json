@@ -1,0 +1,56 @@
+{
+  "input": "verify/fixtures/inputs/filler.txt",
+  "expect": "owner",
+  "why": "'Well' opens the sentence before a comma but is not a person.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": {
+      "file": "filler.txt",
+      "last_line": "L0002"
+    },
+    "meeting": {
+      "title": "not in source",
+      "date": "not in source",
+      "participants": [
+        "Sarah",
+        "Tom"
+      ]
+    },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Well, can you send the invoice by Friday?",
+        "line": "L0001",
+        "speaker": "Sarah",
+        "owner": "Well",
+        "due_as_said": "by Friday",
+        "accepted_line": "not in source",
+        "accepted_quote": "not in source",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Well, can you send the invoice by Friday?",
+        "line": "L0001",
+        "speaker": "Sarah",
+        "corrections": []
+      }
+    ],
+    "not_mapped": [
+      {
+        "line": "L0002",
+        "category": "action",
+        "trigger": "let me",
+        "reason": "not_a_commitment",
+        "see_line": "not in source"
+      }
+    ]
+  }
+}

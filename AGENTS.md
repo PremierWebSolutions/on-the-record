@@ -43,6 +43,8 @@ Instructions for any coding agent working on this repository.
 - `inputs/pac-hmrc-2026-05-18.txt` — byte-identical to the publisher's paragraphs (hash in SOURCE.md).
 
 ## Gotchas
+- A `Speaker:` label is taken from any short text before the first ": ", so a heading or annotation ("Action: …", "Note: …") would become a speaker; `tools/otr_core.py` keeps a reserved-word list that stops the common ones, and `input-format.md` says it cannot be airtight.
+- Action, decision and question quotes must be the whole sentence holding their trigger. A run made under the earlier "start late" rule fails the trigger gate; regenerate the run, don't relax the gate.
 - `number.py` treats text before the first ": " as a speaker label if it is five words or fewer, so a header like "Oral evidence: …" would become a speaker. Header lines in inputs avoid colons.
 - The first blind pass ran on numbered files generated before a figure-pattern fix. Stale derived files are now a selftest failure.
 - The Claude CLI's OAuth can expire; `translate.sh` then fails with "OAuth session expired". Run `claude` interactively to sign in again.

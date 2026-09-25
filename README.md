@@ -6,14 +6,15 @@ Accountants write these notes by hand after client calls, and project managers a
 
 ## Use it
 
-Try it on the included accountant call first, then swap in your own transcript's path. Run everything from the repository root.
+The translator is the `translator/` folder: five Markdown files and a JSON schema, nothing else. Add that folder, and only that folder, to a Claude project and set the project instructions to *"You are the translator in identity.md. Follow rules.md exactly."* Then paste a transcript. Plain `Speaker: text`, Otter exports and Teams or Zoom WebVTT all work, and the folder numbers the lines itself. What comes back is the note.
 
-1. **Number the transcript.** `python3 tools/number.py inputs/accountant-yearend-call.txt > call.txt`. Plain `Speaker: text`, Otter exports and Teams or Zoom WebVTT all work.
-2. **Translate.** Add the `translator/` folder, and only that folder, to a Claude project. Set the project instructions to *"You are the translator in identity.md. Follow rules.md exactly."*, paste the contents of `call.txt`, and save the reply as `note.json` in the repository root.
-3. **Check it.** `python3 verify/check.py --input inputs/accountant-yearend-call.txt --output note.json`. Python 3 only, no install, no network. Give it the original transcript: it numbers the file itself, the same way step 1 did.
-4. **Read it.** `python3 tools/render.py --input inputs/accountant-yearend-call.txt --output note.json --html note.html` puts the transcript beside the note, with every quote highlighted in its line.
+The scripts below are not the translator. They prove it kept its promise. Run them from the repository root, on the included accountant call first.
 
-If you use the Claude Code CLI, `tools/translate.sh inputs/accountant-yearend-call.txt` does steps 1 to 3 in one go and writes to `runs/`.
+1. **Number the transcript, optionally.** `python3 tools/number.py inputs/accountant-yearend-call.txt > call.txt` gives the translator numbered lines and its worklist. Paste `call.txt` instead of the raw file.
+2. **Check the note.** Save the reply as `note.json` in the repository root, then `python3 verify/check.py --input inputs/accountant-yearend-call.txt --output note.json`. Python 3 only, no install, no network. It takes the original transcript and numbers it the same way.
+3. **Read it.** `python3 tools/render.py --input inputs/accountant-yearend-call.txt --output note.json --html note.html` puts the transcript beside the note with every quote highlighted.
+
+With the Claude Code CLI, `tools/translate.sh inputs/accountant-yearend-call.txt` does all three and writes to `runs/`.
 
 ## What comes back
 
@@ -21,7 +22,7 @@ One JSON object with the same six sections every time: `meeting`, `actions`, `de
 
 ## How we know it holds
 
-- `python3 verify/check.py --selftest` runs planted defects, each of which must be caught by the gate it names: a quote credited to the wrong speaker, the right quote on the next line, a condition cut off a promise.
+- `python3 verify/check.py --selftest` runs planted defects, each of which must be caught by the gate it names: a quote credited to the wrong speaker, an owner taken from a date, a decision sliced out of "disagreed". Eight independent attackers forged outputs against the checker before submission; what got past it and how each hole was closed is in [evidence/red-team.md](evidence/red-team.md).
 - `python3 verify/check.py --matrix` checks every final run in `runs/`.
 - One input is real: a Public Accounts Committee hearing with HMRC. [inputs/SOURCE.md](inputs/SOURCE.md) gives Parliament's URL and the file's SHA-256, so you can compare the two yourself.
 - Every run was blind, made by a fresh agent given only `translator/` and one transcript. Failed first attempts are kept ([evidence/RESULTS.md](evidence/RESULTS.md)).

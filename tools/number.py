@@ -16,6 +16,7 @@ from otr_core import find_occurrences, load_lexicons, parse_transcript  # noqa: 
 
 
 def main(argv):
+    sys.stdout.reconfigure(encoding="utf-8")
     if len(argv) != 2:
         print(__doc__.strip(), file=sys.stderr)
         return 2

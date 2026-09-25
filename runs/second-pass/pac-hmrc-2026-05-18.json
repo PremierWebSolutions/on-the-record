@@ -25,6 +25,19 @@
   "actions": [
     {
       "id": "A1",
+      "kind": "tentative",
+      "trigger": "we will probably",
+      "quote": "We will probably come back to some of those issues in the rest of the session.",
+      "line": "L0003",
+      "speaker": "Chair",
+      "owner": "Chair",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A2",
       "kind": "committed",
       "trigger": "we will",
       "quote": "from September we will launch three specific test and learns, which will enable us to really test the cost and value of the co-operative compliance approach to a greater proportion of our business colleagues.",
@@ -37,7 +50,7 @@
       "corrections": []
     },
     {
-      "id": "A2",
+      "id": "A3",
       "kind": "committed",
       "trigger": "we will",
       "quote": "we will have to write to you to give you the precise number.",
@@ -50,7 +63,7 @@
       "corrections": []
     },
     {
-      "id": "A3",
+      "id": "A4",
       "kind": "requested",
       "trigger": "could you",
       "quote": "Could you let us have the figures, then?",
@@ -63,11 +76,24 @@
       "corrections": []
     },
     {
-      "id": "A4",
+      "id": "A5",
       "kind": "committed",
       "trigger": "we will",
       "quote": "We will give you the precise figures.",
       "line": "L0010",
+      "speaker": "John-Paul Marks",
+      "owner": "John-Paul Marks",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A6",
+      "kind": "committed",
+      "trigger": "we will",
+      "quote": "We will see.",
+      "line": "L0015",
       "speaker": "John-Paul Marks",
       "owner": "John-Paul Marks",
       "due_as_said": "not in source",
@@ -97,7 +123,7 @@
     {
       "id": "F3",
       "token": "5,500",
-      "quote": "the Government have announced both 5,500 additional compliance officers and 2,400 additional debt officers",
+      "quote": "5,500 additional compliance officers",
       "line": "L0004",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -105,7 +131,7 @@
     {
       "id": "F4",
       "token": "2,400",
-      "quote": "the Government have announced both 5,500 additional compliance officers and 2,400 additional debt officers",
+      "quote": "2,400 additional debt officers",
       "line": "L0004",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -113,7 +139,7 @@
     {
       "id": "F5",
       "token": "£10 billion",
-      "quote": "Taken together, that will bring additional tax revenues of £10 billion in ’29-30.",
+      "quote": "will bring additional tax revenues of £10 billion in '29-30",
       "line": "L0004",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -121,7 +147,7 @@
     {
       "id": "F6",
       "token": "£50 billion",
-      "quote": "For the out-turn for this financial year, compliance yield will be around £50 billion, which we think will be a record high, but it needs to increase by £10 billion a year by the end of this spending review period.",
+      "quote": "compliance yield will be around £50 billion",
       "line": "L0004",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -129,7 +155,7 @@
     {
       "id": "F7",
       "token": "£10 billion",
-      "quote": "For the out-turn for this financial year, compliance yield will be around £50 billion, which we think will be a record high, but it needs to increase by £10 billion a year by the end of this spending review period.",
+      "quote": "needs to increase by £10 billion a year by the end of this spending review period",
       "line": "L0004",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -137,7 +163,7 @@
     {
       "id": "F8",
       "token": "5,500",
-      "quote": "In the expansion that JP just mentioned—the 5,500 full-time equivalent members that our teams will grow by—because 60% of the tax gap stems from small business non-compliance, we are, understandably, growing initially into our small business compliance.",
+      "quote": "5,500 full-time equivalent members that our teams will grow by",
       "line": "L0006",
       "speaker": "Nicole Newbury",
       "corrections": []
@@ -145,7 +171,7 @@
     {
       "id": "F9",
       "token": "60%",
-      "quote": "In the expansion that JP just mentioned—the 5,500 full-time equivalent members that our teams will grow by—because 60% of the tax gap stems from small business non-compliance, we are, understandably, growing initially into our small business compliance.",
+      "quote": "60% of the tax gap stems from small business non-compliance",
       "line": "L0006",
       "speaker": "Nicole Newbury",
       "corrections": []
@@ -153,7 +179,7 @@
     {
       "id": "F10",
       "token": "5,500",
-      "quote": "As Nicole says, a large proportion of the 5,500 will be focused on the higher volume, higher value compliance activity, which is necessary to ensure that we get the small business tax gap falling.",
+      "quote": "a large proportion of the 5,500 will be focused on the higher volume",
       "line": "L0008",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -161,7 +187,7 @@
     {
       "id": "F11",
       "token": "5,500",
-      "quote": "It is relatively small compared with the 5,500, but it is absolutely focused on the areas that we think need it the most.",
+      "quote": "relatively small compared with the 5,500",
       "line": "L0011",
       "speaker": "Nicole Newbury",
       "corrections": []
@@ -177,7 +203,7 @@
     {
       "id": "F13",
       "token": "£1",
-      "quote": "In terms of the amount that you collect for every £1 spent.",
+      "quote": "for every £1 spent",
       "line": "L0014",
       "speaker": "Chair",
       "corrections": []
@@ -185,7 +211,7 @@
     {
       "id": "F14",
       "token": "£50 billion",
-      "quote": "We expect our yield to increase from £50 billion to £60 billion per year by the end of this SR period.",
+      "quote": "our yield to increase from £50 billion",
       "line": "L0017",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -193,7 +219,7 @@
     {
       "id": "F15",
       "token": "£60 billion",
-      "quote": "We expect our yield to increase from £50 billion to £60 billion per year by the end of this SR period.",
+      "quote": "to £60 billion per year by the end of this SR period",
       "line": "L0017",
       "speaker": "John-Paul Marks",
       "corrections": []
@@ -202,7 +228,7 @@
   "questions": [
     {
       "id": "Q1",
-      "quote": "Looking at the success, and the fact that every £1 spent brings in £95, why don’t you spend more?",
+      "quote": "Looking at the success, and the fact that every £1 spent brings in £95, why don't you spend more?",
       "line": "L0003",
       "speaker": "Chair",
       "corrections": []
@@ -216,7 +242,7 @@
     },
     {
       "id": "Q3",
-      "quote": "To come back to large businesses, how much extra resource are you putting into the large business directorate?",
+      "quote": "how much extra resource are you putting into the large business directorate?",
       "line": "L0007",
       "speaker": "Chair",
       "corrections": []
@@ -238,24 +264,10 @@
   ],
   "not_mapped": [
     {
-      "line": "L0003",
-      "category": "action",
-      "trigger": "we will probably",
-      "reason": "procedural",
-      "see_line": "not in source"
-    },
-    {
       "line": "L0007",
       "category": "action",
       "trigger": "we will",
       "reason": "procedural",
-      "see_line": "not in source"
-    },
-    {
-      "line": "L0015",
-      "category": "action",
-      "trigger": "we will",
-      "reason": "not_a_commitment",
       "see_line": "not in source"
     }
   ]

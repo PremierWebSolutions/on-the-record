@@ -1,0 +1,38 @@
+{
+  "input": "verify/fixtures/inputs/fail-owner-noun.txt",
+  "expect": "owner",
+  "why": "Tom's reply is a bare hedge with no acceptance phrase and there is no named addressee, so the owner is not in source; the forged owner is the object of the request, not a person.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-owner-noun.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Priya", "Tom"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Can you sort the invoice, please?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "owner": "invoice",
+        "due_as_said": "not in source",
+        "accepted_line": "not in source",
+        "accepted_quote": "not in source",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Can you sort the invoice, please?",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      }
+    ],
+    "not_mapped": []
+  }
+}

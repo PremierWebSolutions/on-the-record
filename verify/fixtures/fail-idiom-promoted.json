@@ -1,0 +1,30 @@
+{
+  "input": "verify/fixtures/inputs/fail-idiom-promoted.txt",
+  "expect": "trigger",
+  "why": "'I'll be honest' is the idiom, not a commitment; the forged version promotes it to a committed action instead of leaving it not_mapped.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-idiom-promoted.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Tom", "Priya"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "committed",
+        "trigger": "i'll",
+        "quote": "I'll be honest, it was a tough year.",
+        "line": "L0001",
+        "speaker": "Tom",
+        "owner": "Tom",
+        "due_as_said": "not in source",
+        "accepted_line": "not in source",
+        "accepted_quote": "not in source",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [],
+    "not_mapped": []
+  }
+}

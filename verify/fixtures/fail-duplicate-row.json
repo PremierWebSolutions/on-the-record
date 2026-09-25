@@ -1,0 +1,33 @@
+{
+  "input": "verify/fixtures/inputs/fail-duplicate-row.txt",
+  "expect": "shape",
+  "why": "There is exactly one figure occurrence on the line; the forged output duplicates it into two identical rows, F1 and F2.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-duplicate-row.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Priya", "Tom"] },
+    "actions": [],
+    "decisions": [],
+    "figures": [
+      {
+        "id": "F1",
+        "token": "85k",
+        "quote": "Turnover was about 85k.",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      },
+      {
+        "id": "F2",
+        "token": "85k",
+        "quote": "Turnover was about 85k.",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      }
+    ],
+    "questions": [],
+    "not_mapped": []
+  }
+}

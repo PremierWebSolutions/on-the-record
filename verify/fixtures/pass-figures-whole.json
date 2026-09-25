@@ -1,0 +1,41 @@
+{
+  "input": "verify/fixtures/inputs/pass-figures-whole.txt",
+  "expect": "pass",
+  "why": "All three figures are whole and exact, each quoted with the full sentence they appear in.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "pass-figures-whole.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Priya", "Tom"] },
+    "actions": [],
+    "decisions": [],
+    "figures": [
+      {
+        "id": "F1",
+        "token": "£85,000",
+        "quote": "Turnover was £85,000, up 20%, and the van repair was £1,412.50.",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      },
+      {
+        "id": "F2",
+        "token": "20%",
+        "quote": "Turnover was £85,000, up 20%, and the van repair was £1,412.50.",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      },
+      {
+        "id": "F3",
+        "token": "£1,412.50",
+        "quote": "Turnover was £85,000, up 20%, and the van repair was £1,412.50.",
+        "line": "L0001",
+        "speaker": "Priya",
+        "corrections": []
+      }
+    ],
+    "questions": [],
+    "not_mapped": []
+  }
+}

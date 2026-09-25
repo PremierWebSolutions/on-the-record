@@ -1,0 +1,38 @@
+{
+  "input": "verify/fixtures/inputs/fail-acceptance-refusal.txt",
+  "expect": "owner",
+  "why": "A refusal marker anywhere in the reply means it is not an acceptance, whatever else is said; the forged version records it as accepted anyway.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-acceptance-refusal.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Alice", "Bob"] },
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "requested",
+        "trigger": "can you",
+        "quote": "Can you send the draft today?",
+        "line": "L0001",
+        "speaker": "Alice",
+        "owner": "Bob",
+        "due_as_said": "today",
+        "accepted_line": "L0002",
+        "accepted_quote": "Yes, but I can't do that, I'm out all week.",
+        "corrections": []
+      }
+    ],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "Can you send the draft today?",
+        "line": "L0001",
+        "speaker": "Alice",
+        "corrections": []
+      }
+    ],
+    "not_mapped": []
+  }
+}

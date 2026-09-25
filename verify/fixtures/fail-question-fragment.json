@@ -1,0 +1,24 @@
+{
+  "input": "verify/fixtures/inputs/fail-question-fragment.txt",
+  "expect": "trigger",
+  "why": "The question quote must run the whole sentence so the 'not' that negates it travels with it; the forged quote starts mid-sentence and drops the negation and the opening.",
+  "output": {
+    "translator": "on-the-record",
+    "version": "1",
+    "source": { "file": "fail-question-fragment.txt", "last_line": "L0002" },
+    "meeting": { "title": "not in source", "date": "not in source", "participants": ["Sam", "Lena"] },
+    "actions": [],
+    "decisions": [],
+    "figures": [],
+    "questions": [
+      {
+        "id": "Q1",
+        "quote": "going ahead with the launch, given the delays?",
+        "line": "L0001",
+        "speaker": "Sam",
+        "corrections": []
+      }
+    ],
+    "not_mapped": []
+  }
+}
