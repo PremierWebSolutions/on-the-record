@@ -3,7 +3,7 @@
 
     python3 verify/check.py --input inputs/call.txt --output runs/call.json
     python3 verify/check.py --input inputs/call.txt --output out.json --corrections corrections.txt
-    python3 verify/check.py --matrix      # every runs/*.json against the input it names
+    python3 verify/check.py --matrix      # every published run (runs/*.json, runs/haiku/*.json) against its input
     python3 verify/check.py --selftest    # every planted fixture must fail through its declared gate
 
 Python standard library only. No network, no model, no install.
@@ -450,7 +450,7 @@ def stale_derived_files():
 
 
 def matrix():
-    runs = sorted((ROOT / "runs").glob("*.json"))
+    runs = sorted((ROOT / "runs").glob("*.json")) + sorted((ROOT / "runs" / "haiku").glob("*.json"))
     passed = 0
     for r in runs:
         out = json.loads(r.read_text(encoding="utf-8"))
@@ -458,7 +458,7 @@ def matrix():
         corr = r.with_suffix(".corrections.txt")
         ok, results = check_pair(src, r, corr if corr.exists() else None, quiet=True)
         passed += ok
-        print("  %-4s %s  (%s)" % ("PASS" if ok else "FAIL", r.name, ", ".join(g for g in GATES if results[g]) or "all gates"))
+        print("  %-4s %s  (%s)" % ("PASS" if ok else "FAIL", r.relative_to(ROOT / "runs").as_posix(), ", ".join(g for g in GATES if results[g]) or "all gates"))
     print("\n%d/%d runs pass every gate" % (passed, len(runs)))
     return passed == len(runs)
 
