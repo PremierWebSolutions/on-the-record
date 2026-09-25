@@ -14,7 +14,6 @@ The scripts below are not the translator. They prove it kept its promise. Run th
 2. **Check the note.** Save the reply as `note.json` in the repository root, then `python3 verify/check.py --input inputs/accountant-yearend-call.txt --output note.json`. Python 3 only, no install, no network. It takes the original transcript and numbers it the same way.
 3. **Read it.** `python3 tools/render.py --input inputs/accountant-yearend-call.txt --output note.json --html note.html` puts the transcript beside the note with every quote highlighted.
 
-With the Claude Code CLI, `tools/translate.sh inputs/accountant-yearend-call.txt` does all three and writes to `runs/`.
 
 ## What comes back
 

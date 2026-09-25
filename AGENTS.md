@@ -10,7 +10,7 @@ Instructions for any coding agent working on this repository.
 
 ## Layout
 - `translator/` — the drop-in folder: identity, rules, examples, reference/ (the contract). This is what goes into a Claude project.
-- `tools/` — `number.py` (normaliser + trigger index), `otr_core.py` (shared parsing), `translate.sh` (runs the Claude CLI), `render.py` (file note view), `build_examples.py`.
+- `tools/` — `number.py` (normaliser + trigger index), `otr_core.py` (shared parsing), `render.py` (file note view), `build_examples.py`.
 - `verify/` — `check.py` (the gates), `examples/` (checked pairs shown in examples.md), `fixtures/` (planted defects).
 - `inputs/` — test transcripts, their numbered forms, SOURCE.md, TRAPS.md.
 - `runs/` — translator outputs; `first-pass/` keeps the failed first attempts unedited.
@@ -47,4 +47,3 @@ Instructions for any coding agent working on this repository.
 - Action, decision and question quotes must be the whole sentence holding their trigger. A run made under the earlier "start late" rule fails the trigger gate; regenerate the run, don't relax the gate.
 - `number.py` treats text before the first ": " as a speaker label if it is five words or fewer, so a header like "Oral evidence: …" would become a speaker. Header lines in inputs avoid colons.
 - The first blind pass ran on numbered files generated before a figure-pattern fix. Stale derived files are now a selftest failure.
-- The Claude CLI's OAuth can expire; `translate.sh` then fails with "OAuth session expired". Run `claude` interactively to sign in again.
