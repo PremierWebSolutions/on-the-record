@@ -33,3 +33,5 @@ A reader who has never seen the repo opens the README and tries to translate a t
 5. The CLI shortcut moved out of step 2 into its own line after the steps.
 
 Predictions were committed in `85b43f6`; the walk and fixes are in the commit after it.
+
+**After the walk.** The README's "Use it" section was reordered once more, so that the `translator/` folder comes first and the scripts are introduced as proof rather than as the product. That change was made after the walk above and has not been walked by a stranger.

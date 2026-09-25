@@ -1,0 +1,255 @@
+{
+  "translator": "on-the-record",
+  "version": "1",
+  "source": {
+    "file": "inputs/pac-hmrc-2026-05-18.txt",
+    "last_line": "L0017"
+  },
+  "meeting": {
+    "title": {
+      "quote": "Public Accounts Committee",
+      "line": "L0001",
+      "speaker": "(none)"
+    },
+    "date": {
+      "quote": "Monday 18 May 2026",
+      "line": "L0002",
+      "speaker": "(none)"
+    },
+    "participants": [
+      "Chair",
+      "John-Paul Marks",
+      "Nicole Newbury"
+    ]
+  },
+  "actions": [
+    {
+      "id": "A1",
+      "kind": "tentative",
+      "trigger": "we will probably",
+      "quote": "We will probably come back to some of those issues in the rest of the session.",
+      "line": "L0003",
+      "speaker": "Chair",
+      "owner": "Chair",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A2",
+      "kind": "committed",
+      "trigger": "we will",
+      "quote": "The NAO’s Report recognises that it was a really successful approach in terms of return on investment, so in response to that recommendation, from September we will launch three specific test and learns, which will enable us to really test the cost and value of the co-operative compliance approach to a greater proportion of our business colleagues.",
+      "line": "L0006",
+      "speaker": "Nicole Newbury",
+      "owner": "Nicole Newbury",
+      "due_as_said": "from September",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A3",
+      "kind": "committed",
+      "trigger": "we will",
+      "quote": "We do not have that number to hand, so we will have to write to you to give you the precise number.",
+      "line": "L0008",
+      "speaker": "John-Paul Marks",
+      "owner": "John-Paul Marks",
+      "due_as_said": "not in source",
+      "accepted_line": "not in source",
+      "accepted_quote": "not in source",
+      "corrections": []
+    },
+    {
+      "id": "A4",
+      "kind": "requested",
+      "trigger": "could you",
+      "quote": "Could you let us have the figures, then?",
+      "line": "L0009",
+      "speaker": "Chair",
+      "owner": "John-Paul Marks",
+      "due_as_said": "not in source",
+      "accepted_line": "L0010",
+      "accepted_quote": "We will give you the precise figures.",
+      "corrections": []
+    }
+  ],
+  "decisions": [],
+  "figures": [
+    {
+      "id": "F1",
+      "token": "£1",
+      "quote": "every £1 spent brings in £95",
+      "line": "L0003",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "F2",
+      "token": "£95",
+      "quote": "every £1 spent brings in £95",
+      "line": "L0003",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "F3",
+      "token": "5,500",
+      "quote": "the Government have announced both 5,500 additional compliance officers and 2,400 additional debt officers",
+      "line": "L0004",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    },
+    {
+      "id": "F4",
+      "token": "2,400",
+      "quote": "the Government have announced both 5,500 additional compliance officers and 2,400 additional debt officers",
+      "line": "L0004",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    },
+    {
+      "id": "F5",
+      "token": "£10 billion",
+      "quote": "that will bring additional tax revenues of £10 billion in ’29-30",
+      "line": "L0004",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    },
+    {
+      "id": "F6",
+      "token": "£50 billion",
+      "quote": "compliance yield will be around £50 billion",
+      "line": "L0004",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    },
+    {
+      "id": "F7",
+      "token": "£10 billion",
+      "quote": "it needs to increase by £10 billion a year by the end of this spending review period",
+      "line": "L0004",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    },
+    {
+      "id": "F8",
+      "token": "5,500",
+      "quote": "the 5,500 full-time equivalent members that our teams will grow by",
+      "line": "L0006",
+      "speaker": "Nicole Newbury",
+      "corrections": []
+    },
+    {
+      "id": "F9",
+      "token": "60%",
+      "quote": "because 60% of the tax gap stems from small business non-compliance",
+      "line": "L0006",
+      "speaker": "Nicole Newbury",
+      "corrections": []
+    },
+    {
+      "id": "F10",
+      "token": "5,500",
+      "quote": "a large proportion of the 5,500 will be focused on the higher volume, higher value compliance activity",
+      "line": "L0008",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    },
+    {
+      "id": "F11",
+      "token": "5,500",
+      "quote": "It is relatively small compared with the 5,500",
+      "line": "L0011",
+      "speaker": "Nicole Newbury",
+      "corrections": []
+    },
+    {
+      "id": "F12",
+      "token": "£95",
+      "quote": "So the £95 figure is going to go up in the future, is it?",
+      "line": "L0012",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "F13",
+      "token": "£1",
+      "quote": "In terms of the amount that you collect for every £1 spent.",
+      "line": "L0014",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "F14",
+      "token": "£50 billion",
+      "quote": "our yield to increase from £50 billion to £60 billion per year",
+      "line": "L0017",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    },
+    {
+      "id": "F15",
+      "token": "£60 billion",
+      "quote": "our yield to increase from £50 billion to £60 billion per year",
+      "line": "L0017",
+      "speaker": "John-Paul Marks",
+      "corrections": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "quote": "Looking at the success, and the fact that every £1 spent brings in £95, why don’t you spend more?",
+      "line": "L0003",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "Q2",
+      "quote": "In terms of capacity, how much of that extra investment in staffing will go to the large business directorate?",
+      "line": "L0005",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "Q3",
+      "quote": "To come back to large businesses, how much extra resource are you putting into the large business directorate?",
+      "line": "L0007",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "Q4",
+      "quote": "Could you let us have the figures, then?",
+      "line": "L0009",
+      "speaker": "Chair",
+      "corrections": []
+    },
+    {
+      "id": "Q5",
+      "quote": "So the £95 figure is going to go up in the future, is it?",
+      "line": "L0012",
+      "speaker": "Chair",
+      "corrections": []
+    }
+  ],
+  "not_mapped": [
+    {
+      "line": "L0007",
+      "category": "action",
+      "trigger": "we will",
+      "reason": "procedural",
+      "see_line": "not in source"
+    },
+    {
+      "line": "L0015",
+      "category": "action",
+      "trigger": "we will",
+      "reason": "not_a_commitment",
+      "see_line": "not in source"
+    }
+  ]
+}
